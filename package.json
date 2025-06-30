@@ -1,8 +1,8 @@
 {
     "name": "qwc2-demo-app",
     "version": "2025.06.13",
-    "description": "Demo application based on QGIS Web Client",
-    "author": "Sourcepole",
+    "description": "MARBEFES BBT database QGIS Web Client",
+    "author": "Sourcepole & Razinka",
     "license": "BSD-2-Clause",
     "repository": "git@github.com:sourcepole/qwc2-demo-app.git",
     "private": true,
