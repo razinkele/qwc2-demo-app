@@ -147,10 +147,6 @@
             ],
             "backgroundLayers": [
               {
-                "name": "mapnik",
-                "visibility": true
-              },
-              {
                 "name": "opentopomap"
               },
               {
