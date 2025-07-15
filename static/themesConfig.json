@@ -635,7 +635,7 @@
             },
             {"title":"Heraklion",
 				        "name":"HeraklionBBT",
-                "url":"http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Balearic.qgs",
+                "url":"http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Herklion.qgs",
                 "description": "Heraklion BBT",
                 "thumbnail": "heraklion.png",
                 "attribution":"Broad Band Transects",
