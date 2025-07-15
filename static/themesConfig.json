@@ -781,28 +781,7 @@
                     }
                 ]
             },
-            {
-                "name":"Gemeindegrenzen",
-                "title":"Gemeindegrenzen",
-                "type":"wms",
-                "url":"http://wms.geo.admin.ch/",
-                "tiled":false,
-                "params":{
-                    "LAYERS":"ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill",
-                    "STYLES":"default"
-                }
-            },
-            {
-                "name":"oevhaltestellen",
-                "title":"Haltestellen öV",
-                "type":"wms",
-                "url":"http://wms.geo.admin.ch/",
-                "tiled": true,
-                "params": {
-                    "LAYERS":"ch.bav.haltestellen-oev",
-                    "STYLES":"default"
-                }
-            },
+            
           {
             "type": "wmts",
             "url": "https://tiles.emodnet-bathymetry.eu/2020/baselayer/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.png",

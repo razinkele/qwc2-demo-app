@@ -47,9 +47,7 @@
     "textStroke": "white",
     "textFont": "11pt sans-serif"
   },
-  "importLayerUrlPresets": [
-    {"label": "Swisstopo WMTS", "value": "https://wmts10.geo.admin.ch/EPSG/2056/1.0.0/WMTSCapabilities.xml"}
-  ],
+
   "projections": [
     {
       "code": "EPSG:3035",
@@ -280,7 +278,7 @@
       {
         "name": "NewsPopup",
         "cfg": {
-          "newsDocument": "https://qwc-services.github.io/master/release_notes/ChangeLog/",
+          "newsDocument": "http://marbefes.eu/articles/news",
           "newsRev": "20250210"
         }
       },
