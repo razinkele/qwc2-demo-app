@@ -106,6 +106,32 @@
         }
       },
       {
+        "name": "Data",
+        "cfg": {
+          "dataUrl": "https://marbefes.eu/data",
+          "title": "Data Portal",
+          "geometry": {
+            "initialWidth": 800,
+            "initialHeight": 600,
+            "initialX": 100,
+            "initialY": 100
+          }
+        }
+      },
+      {
+        "name": "Bowtie",
+        "cfg": {
+          "dataUrl": "http://laguna.ku.lt:3838/sample-apps/bowtie/",
+          "title": "Bowtie Analysis",
+          "geometry": {
+            "initialWidth": 1000,
+            "initialHeight": 700,
+            "initialX": 50,
+            "initialY": 50
+          }
+        }
+      },
+      {
         "name": "Editing",
         "cfg": {
           "allowCloneGeometry": true
@@ -469,7 +495,7 @@
       {
         "name": "TaskButton",
         "cfg": {
-          "position": 5,
+          "position": 1,
           "task": "LayerTree",
           "icon": "layers"
         }
@@ -477,7 +503,33 @@
       {
         "name": "TaskButton",
         "cfg": {
-          "position": 6,
+          "position": 2,
+          "task": "Data",
+          "icon": "database",
+          "tooltip": "Data Portal"
+        }
+      },
+      {
+        "name": "TaskButton",
+        "cfg": {
+          "position": 3,
+          "task": "Bowtie",
+          "icon": "chart",
+          "tooltip": "Bowtie Analysis"
+        }
+      },
+      {
+        "name": "TaskButton",
+        "cfg": {
+          "position": 4,
+          "task": "Measure",
+          "icon": "measure"
+        }
+      },
+      {
+        "name": "TaskButton",
+        "cfg": {
+          "position": 5,
           "task": "Editing",
           "icon": "editing"
         }
@@ -485,13 +537,13 @@
       {
         "name": "ZoomIn",
         "cfg": {
-          "position": 2
+          "position": 7
         }
       },
       {
         "name": "ZoomOut",
         "cfg": {
-          "position": 1
+          "position": 6
         }
       },
       {
