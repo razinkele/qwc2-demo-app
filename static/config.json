@@ -345,7 +345,7 @@
         "name": "Portal",
         "cfg": {
           "logo": "logo.svg",
-          "topBarText": "",
+          "topBarText": "BBT Database",
           "showMenuOnStartup": true,
           "keepMenuOpen": true,
           "bottomBarLinks": [
@@ -423,7 +423,7 @@
             }
           },
           "appMenuClearsTask": true,
-          "appMenuFilterField": true,
+          "appMenuFilterField": false,
           "appMenuVisibleOnStartup": false,
           "logoUrl": "/",
           "appMenuShortcut": "alt+shift+m",
