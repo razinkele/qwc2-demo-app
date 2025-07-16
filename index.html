@@ -9,6 +9,7 @@
         <title>QGIS Web Client</title>
         <link rel="stylesheet" type="text/css" href="assets/css/qwc2.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/colorschemes.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/custom-buttons.css" />
         <link rel="apple-touch-icon" href="assets/img/app_icon.png"/>
         <link rel="apple-touch-icon" sizes="72x72" href="assets/img/app_icon_72.png"/>
         <link rel="apple-touch-icon" sizes="114x114" href="assets/img/app_icon_114.png"/>
@@ -48,6 +49,50 @@
             100% {
                 transform: rotate(360deg);
             }
+        }
+        
+        /* FORCE BUTTON POSITIONING - Data and Bowtie buttons */
+        
+        /* Target by position - force last buttons to left side */
+        .toolbar-right > *:nth-last-child(1),
+        .toolbar-right > *:nth-last-child(2) {
+            position: fixed !important;
+            left: 10px !important;
+            z-index: 9999 !important;
+            right: auto !important;
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 6px !important;
+            color: white !important;
+        }
+        
+        .toolbar-right > *:nth-last-child(2) {
+            top: 100px !important;
+            background-color: #2196F3 !important;
+            border: 2px solid #1976D2 !important;
+        }
+        
+        .toolbar-right > *:nth-last-child(1) {
+            top: 160px !important;
+            background-color: #FF9800 !important;
+            border: 2px solid #F57C00 !important;
+        }
+        
+        /* Alternative targeting by any attribute containing our keywords */
+        *[title*="Data" i] {
+            position: fixed !important;
+            left: 10px !important;
+            top: 100px !important;
+            background-color: #2196F3 !important;
+            z-index: 9999 !important;
+        }
+        
+        *[title*="Bowtie" i] {
+            position: fixed !important;
+            left: 10px !important;
+            top: 160px !important;
+            background-color: #FF9800 !important;
+            z-index: 9999 !important;
         }
         </style>
         <script type="text/javascript" src="assets/searchProviders.js" ></script>

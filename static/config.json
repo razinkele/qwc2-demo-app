@@ -108,8 +108,23 @@
       {
         "name": "Data",
         "cfg": {
-          "dataUrl": "https://marbefes.eu/data",
           "title": "Data Portal",
+          "useThemeUrl": true,
+          "themeUrls": {
+            "BBT": "https://marbefes.eu/data/overview",
+            "NorthSea": "https://marbefes.eu/data/northsea",
+            "IrishSea": "https://marbefes.eu/data/irishsea",
+            "Lithuanian": "https://marbefes.eu/data/lithuanian",
+            "GdanskBayBBT": "https://marbefes.eu/data/gdansk",
+            "ArchipelagoBBT": "https://marbefes.eu/data/archipelago",
+            "SvalbardBBT": "https://marbefes.eu/data/svalbard",
+            "NorwegianBBT": "https://marbefes.eu/data/porsanger",
+            "BayofBiscayBBT": "https://marbefes.eu/data/biscay",
+            "SardegnaBBT": "https://marbefes.eu/data/sardegna",
+            "BalearicBBT": "https://marbefes.eu/data/balearic",
+            "HeraklionBBT": "https://marbefes.eu/data/heraklion"
+          },
+          "defaultUrl": "https://marbefes.eu/data",
           "geometry": {
             "initialWidth": 800,
             "initialHeight": 600,
@@ -121,8 +136,23 @@
       {
         "name": "Bowtie",
         "cfg": {
-          "dataUrl": "http://laguna.ku.lt:3838/sample-apps/bowtie/",
           "title": "Bowtie Analysis",
+          "useThemeUrl": true,
+          "themeUrls": {
+            "BBT": "http://laguna.ku.lt:3838/sample-apps/bowtie/overview/",
+            "NorthSea": "http://laguna.ku.lt:3838/sample-apps/bowtie/northsea/",
+            "IrishSea": "http://laguna.ku.lt:3838/sample-apps/bowtie/irishsea/",
+            "Lithuanian": "http://laguna.ku.lt:3838/sample-apps/bowtie/lithuanian/",
+            "GdanskBayBBT": "http://laguna.ku.lt:3838/sample-apps/bowtie/gdansk/",
+            "ArchipelagoBBT": "http://laguna.ku.lt:3838/sample-apps/bowtie/archipelago/",
+            "SvalbardBBT": "http://laguna.ku.lt:3838/sample-apps/bowtie/svalbard/",
+            "NorwegianBBT": "http://laguna.ku.lt:3838/sample-apps/bowtie/porsanger/",
+            "BayofBiscayBBT": "http://laguna.ku.lt:3838/sample-apps/bowtie/biscay/",
+            "SardegnaBBT": "http://laguna.ku.lt:3838/sample-apps/bowtie/sardegna/",
+            "BalearicBBT": "http://laguna.ku.lt:3838/sample-apps/bowtie/balearic/",
+            "HeraklionBBT": "http://laguna.ku.lt:3838/sample-apps/bowtie/heraklion/"
+          },
+          "defaultUrl": "http://laguna.ku.lt:3838/sample-apps/bowtie/",
           "geometry": {
             "initialWidth": 1000,
             "initialHeight": 700,
@@ -481,6 +511,7 @@
           "defaultTimelineDisplay": "features"
         }
       }
+
     ],
     "mobile": [
       {
@@ -504,24 +535,6 @@
         "name": "TaskButton",
         "cfg": {
           "position": 2,
-          "task": "Data",
-          "icon": "database",
-          "tooltip": "Data Portal"
-        }
-      },
-      {
-        "name": "TaskButton",
-        "cfg": {
-          "position": 3,
-          "task": "Bowtie",
-          "icon": "chart",
-          "tooltip": "Bowtie Analysis"
-        }
-      },
-      {
-        "name": "TaskButton",
-        "cfg": {
-          "position": 4,
           "task": "Measure",
           "icon": "measure"
         }
@@ -529,7 +542,7 @@
       {
         "name": "TaskButton",
         "cfg": {
-          "position": 5,
+          "position": 3,
           "task": "Editing",
           "icon": "editing"
         }
@@ -537,13 +550,33 @@
       {
         "name": "ZoomIn",
         "cfg": {
-          "position": 7
+          "position": 5
         }
       },
       {
         "name": "ZoomOut",
         "cfg": {
-          "position": 6
+          "position": 4
+        }
+      },
+      {
+        "name": "TaskButton",
+        "cfg": {
+          "task": "Data",
+          "icon": "database",
+          "tooltip": "Data Portal",
+          "position": 6,
+          "className": "data-portal-button"
+        }
+      },
+      {
+        "name": "TaskButton",
+        "cfg": {
+          "task": "Bowtie",
+          "icon": "chart",
+          "tooltip": "Bowtie Analysis",
+          "position": 7,
+          "className": "bowtie-analysis-button"
         }
       },
       {
