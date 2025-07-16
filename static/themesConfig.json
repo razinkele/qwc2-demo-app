@@ -61,7 +61,7 @@
 			{
             "title": "North Sea",
             "url": "http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/NorthSea.qgs",
-            "description": "North Sea BBT",
+            "description": "<North Sea BBT>",
             "thumbnail": "north.jpg",
             "attribution": "Broad Band Transects",
             "attributionUrl": "marbefes.eu",
@@ -120,7 +120,7 @@
           {
             "title": "Irish Sea",
             "url": "http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/IrishSea.qgs",
-            "description": "Irish Sea BBT",
+            "description": "<Irish Sea BBT>",
             "thumbnail": "irish.jpg",
             "attribution": "Broad Band Transects",
             "attributionUrl": "marbefes.eu",
@@ -174,7 +174,7 @@
 			    {
 		        "title":"Lithuanian coastal zone",
                 "url":"http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Lithuanian.qgs",
-                "description": "Lithuanian BBT",
+                "description": "<Lithuanian BBT>",
                 "attribution":"Broad Band Transects",
                 "thumbnail": "lithuanian.jpg",
                 "attributionUrl":"marbefes.eu",
@@ -227,7 +227,7 @@
             "title": "Gdansk bay",
             "name": "GdanskBayBBT",
             "url":"http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/GdanskBay.qgs",
-            "description": "<MARBEFES BBTs>",
+            "description": "<Gdansk bay BBT>",
             "thumbnail": "gdansk.jpg",
             "attribution": "Broad Band Transects",
             "attributionUrl": "https://old.iopan.pl/projects/Marbefes/",
@@ -285,7 +285,7 @@
             "title": "Archipelago",
             "name": "ArchipelagoBBT",
             "url": "http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Archipelago.qgs",
-            "description": "Archipelago BBT",
+            "description": "<Archipelago BBT>",
             "thumbnail": "archipelago.jpg",
             "attribution": "Broad Band Transects",
             "attributionUrl": "marbefes.eu",
@@ -309,10 +309,7 @@
               600
             ],
             "backgroundLayers": [
-              {
-                "name": "mapnik",
-                "visibility": true
-              },
+              
               {
                 "name": "opentopomap"
               },
@@ -341,7 +338,7 @@
             {"title":"Svalbard",
 				    "name":"SvalbardBBT",
               "url": "http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Svalbard.qgs",
-                "description": "Svalbard BBT",
+                "description": "<Svalbard BBT>",
                 "thumbnail": "kongsfjord.jpg",
                 "attribution":"Broad Band Transects",
                 "attributionUrl":"marbefes.eu",
@@ -399,10 +396,10 @@
                     "EPSG:4326"
                 ]
             },
-            {"title":"Norwegiian BBT",
+            {"title":"Porsanger fjord",
 				    "name":"NorwegianBBT",
               "url": "http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Norwegian.qgs",
-                "description": "Norwegian BBT",
+                "description": "<Norwegian BBT>",
                 "thumbnail": "norwegian.png",
                 "attribution":"Broad Band Transects",
                 "attributionUrl":"marbefes.eu",
@@ -522,7 +519,7 @@
             {"title":"Sardegna",
 				    "name":"SardegnaBBT",
                 "url":"http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Sardegna.qgs",
-                "description": "Sardegna BBT",
+                "description": "<Sardegna BBT>",
                 "thumbnail": "sardinia.jpg",
                 "attribution":"Broad Band Transects",
                 "attributionUrl":"marbefes.eu",
@@ -579,7 +576,7 @@
             {"title":"Balearic",
 				        "name":"BalearicBBT",
                 "url":"http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Balearic.qgs",
-                "description": "Balearic BBT",
+                "description": "<Balearic BBT>",
                 "thumbnail": "balearic.jpg",
                 "attribution":"Broad Band Transects",
                 "attributionUrl":"marbefes.eu",
@@ -636,7 +633,7 @@
             {"title":"Heraklion",
 				        "name":"HeraklionBBT",
                 "url":"http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Herklion.qgs",
-                "description": "Heraklion BBT",
+                "description": "<Heraklion BBT>",
                 "thumbnail": "heraklion.png",
                 "attribution":"Broad Band Transects",
                 "attributionUrl":"marbefes.eu",

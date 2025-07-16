@@ -278,7 +278,7 @@
       {
         "name": "NewsPopup",
         "cfg": {
-          "newsDocument": "http://marbefes.eu/articles/news",
+          "newsDocument": "https://marbefes.eu/articles/news",
           "newsRev": "20250210"
         }
       },
@@ -293,11 +293,11 @@
           "showMenuOnStartup": true,
           "keepMenuOpen": true,
           "bottomBarLinks": [
-              {"href": "https://qwc-services.github.io/", "label": "Homepage", "target": "iframe"},
+              {"href": "https://marbefes.eu", "label": "MARBEFES Homepage", "target": "_blank"},
               {"href": "https://qgis.org", "label": "QGIS.org"}
           ],
           "menuItems": [
-              {"title": "Homepage", "icon": "info", "url": "https://qwc-services.github.io/", "target": "iframe"},
+              {"title": "MARBEFES Homepage", "icon": "info", "url": "https://marbefes.eu", "target": "_blank"},
               {"key": "Tools", "icon": "tools", "title": "Links", "subitems": [
                 {"icon": "link", "title": "qwc2", "url": "https://github.com/qgis/qwc2/"},
                 {"icon": "link", "title": "qwc-docker", "url": "https://github.com/qwc-services/qwc-docker"},
@@ -351,7 +351,7 @@
             {"key": "Print", "icon": "print", "shortcut": "alt+shift+p"},
             {"key": "Help", "icon": "info", "shortcut": "alt+shift+h"},
             {"key": "Settings", "icon": "cog"},
-            {"title": "Homepage", "icon": "link", "url": "https://qwc-services.github.io/", "target": "iframe"}
+            {"title": "Homepage", "icon": "link", "url": "https://marbefes.eu", "target": "_blank"}
           ],
           "searchOptions": {
             "allowSearchFilters": false,
