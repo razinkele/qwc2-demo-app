@@ -373,7 +373,7 @@
                 {"icon": "info", "title": "Funding", "url": "https://marbefes.eu/funding", "target": "_blank"},
                 {"icon": "info", "title": "Publications", "url": "https://marbefes.eu/publications", "target": "_blank"}
               ]},
-              {"title": "Data Download", "icon": "download", "url": "https://marbefes.eu/downloads", "target": "_blank"},
+              {"title": "Data Download", "icon": "download", "url": "https://emodnet.ec.europa.eu/en", "target": "_blank"},
               {"title": "API Documentation", "icon": "code", "url": "https://marbefes.eu/api", "target": "_blank"}
           ]
         }

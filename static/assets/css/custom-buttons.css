@@ -1,8 +1,50 @@
 /* Custom positioning for Data and Bowtie buttons - aggressive targeting */
-
+/* Hide ALL text input fields in app menu/portal */
+.app-menu input,
+.portal input,
+.themes input {
+    display: none !important;
+}
 /* Debug: Show all buttons with borders to identify them */
 button, .button, [role="button"] {
     /* border: 1px solid red !important; */
+}
+
+/* Theme Viewer/Switcher left button - CHANGE TO RED */
+.theme-switcher button:first-child,
+.themes-panel button:first-child,
+.portal-menu button:first-child,
+.resizeable-window[data-role="ThemeSwitcher"] button:first-child,
+.resizeable-window[data-role="Portal"] button:first-child,
+.theme-list button:first-child,
+.theme-selection button:first-child,
+/* Target navigation/back buttons in theme viewer */
+.theme-switcher .back-button,
+.themes-panel .back-button,
+.portal .back-button,
+.theme-switcher button[class*="back"],
+.themes-panel button[class*="back"],
+.portal button[class*="back"],
+/* Target any left-positioned buttons in theme viewer */
+.theme-switcher button[style*="left"],
+.themes-panel button[style*="left"],
+.portal button[style*="left"] {
+    background-color: #F44336 !important; /* Red color */
+    border-color: #D32F2F !important; /* Darker red border */
+    color: white !important;
+}
+
+/* Hover state for theme viewer left button */
+.theme-switcher button:first-child:hover,
+.themes-panel button:first-child:hover,
+.portal-menu button:first-child:hover,
+.resizeable-window[data-role="ThemeSwitcher"] button:first-child:hover,
+.resizeable-window[data-role="Portal"] button:first-child:hover,
+.theme-switcher .back-button:hover,
+.themes-panel .back-button:hover,
+.portal .back-button:hover {
+    background-color: #D32F2F !important; /* Darker red on hover */
+    border-color: #B71C1C !important;
 }
 
 /* Target ANY button that contains "Data" or "database" */
@@ -31,7 +73,7 @@ button[title*="Data" i],
     height: 40px !important;
 }
 
-/* Target ANY button that contains "Bowtie" or "chart" */
+/* Target ANY button that contains "Bowtie" or "chart" - RED COLOR */
 *[title*="Bowtie" i],
 *[title*="Analysis" i],
 *[class*="bowtie" i],
@@ -48,10 +90,10 @@ button[title*="Bowtie" i],
     top: 160px !important;
     right: auto !important;
     z-index: 9999 !important;
-    background-color: #FF9800 !important;
-    border: 2px solid #F57C00 !important;
+    background-color: #F44336 !important;
+    border: 2px solid #D32F2F !important;
     color: white !important;
-    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3) !important;
+    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3) !important;
     border-radius: 6px !important;
     width: 40px !important;
     height: 40px !important;
@@ -80,7 +122,7 @@ button[class*="button"] {
     position: fixed !important;
     left: 10px !important;
     top: 160px !important;
-    background-color: #FF9800 !important;
+    background-color: #F44336 !important;
     z-index: 9999 !important;
 }
 
@@ -101,6 +143,311 @@ button[class*="button"] {
 
 .icon-chart {
     top: 160px !important;
-    background-color: #FF9800 !important;
+    background-color: #F44336 !important;
 }
 
+/* Portal title background styling - AGGRESSIVE OVERRIDE */
+/* Override CSS custom properties first */
+:root {
+    --titlebar-bg-color: #1a237e !important; /* Dark blue background */
+    --app-menu-bg-color: #1b5e20 !important; /* Dark green for menus */
+    --app-submenu-bg-color: #1b5e20 !important; /* Dark green for submenus */
+    --panel-bg-color: rgba(27, 94, 32, 0.85) !important; /* Dark green panels */
+    --app-menu-text-color: white !important; /* White text for menus */
+    --app-submenu-text-color: white !important; /* White text for submenus */
+    --text-color: white !important; /* Override base text color for menus */
+}
+
+:root.default {
+    --titlebar-bg-color: #1a237e !important; /* Dark blue background */
+    --app-menu-bg-color: #1b5e20 !important; /* Dark green for menus */
+    --app-submenu-bg-color: #1b5e20 !important; /* Dark green for submenus */
+    --panel-bg-color: rgba(27, 94, 32, 0.85) !important; /* Dark green panels */
+    --app-menu-text-color: white !important; /* White text for menus */
+    --app-submenu-text-color: white !important; /* White text for submenus */
+}
+
+:root.dark {
+    --titlebar-bg-color: #1a237e !important; /* Dark blue background */
+    --app-menu-bg-color: #1b5e20 !important; /* Dark green for menus */
+    --app-submenu-bg-color: #1b5e20 !important; /* Dark green for submenus */
+    --panel-bg-color: rgba(27, 94, 32, 0.85) !important; /* Dark green panels */
+    --app-menu-text-color: white !important; /* White text for menus */
+    --app-submenu-text-color: white !important; /* White text for submenus */
+}
+
+:root.highcontrast {
+    --titlebar-bg-color: #1a237e !important; /* Dark blue background */
+    --app-menu-bg-color: #1b5e20 !important; /* Dark green for menus */
+    --app-submenu-bg-color: #1b5e20 !important; /* Dark green for submenus */
+    --panel-bg-color: rgba(27, 94, 32, 0.85) !important; /* Dark green panels */
+    --app-menu-text-color: white !important; /* White text for menus */
+    --app-submenu-text-color: white !important; /* White text for submenus */
+}
+
+/* Use maximum CSS specificity to override any existing styles */
+html body .portal-title,
+html body .portal-header,
+html body .theme-switcher-title,
+html body .portal .titlebar,
+html body .portal-container .titlebar,
+html body [class*="portal"] .titlebar,
+html body [class*="theme"] .titlebar,
+html body .modal-dialog .titlebar,
+html body .resizeable-window .titlebar,
+html body .window .titlebar,
+html body .dialog .titlebar,
+html body .popup .titlebar,
+html body .panel .titlebar,
+/* TARGET MAP & TOOLS RIGHT MENU HEADERS */
+html body .resizeable-window[data-role="LayerTree"] .titlebar,
+html body .resizeable-window[data-role="MapLegend"] .titlebar,
+html body .resizeable-window[data-role="LayerCatalog"] .titlebar,
+html body .resizeable-window[data-role="FeatureSearch"] .titlebar,
+html body .resizeable-window[data-role="Share"] .titlebar,
+html body .resizeable-window[data-role="Bookmark"] .titlebar,
+html body .resizeable-window[data-role="Print"] .titlebar,
+html body .resizeable-window[data-role="Help"] .titlebar,
+html body .resizeable-window[data-role="Settings"] .titlebar,
+html body .resizeable-window[data-role="Identify"] .titlebar,
+html body .resizeable-window[data-role="Measure"] .titlebar,
+html body .resizeable-window[data-role="Editing"] .titlebar,
+html body .layer-tree .titlebar,
+html body .map-legend .titlebar,
+html body .tools-panel .titlebar {
+    background-color: #1b5e20 !important; /* Dark green background for all headers */
+    background: #1b5e20 !important; /* Fallback */
+    color: white !important;
+}
+
+/* Additional targeting for portal-related elements */
+html body .portal-window .titlebar,
+html body .theme-switcher .titlebar,
+html body .themes-panel .titlebar,
+html body .themes-container .titlebar,
+html body .portal-dialog .titlebar {
+    background-color: #1a237e !important; /* Dark blue background */
+    background: #1a237e !important; /* Fallback */
+    color: white !important;
+}
+
+/* Target any titlebar that might be in the portal interface */
+html body .resizeable-window[data-role="Portal"] .titlebar,
+html body .resizeable-window[data-role="ThemeSwitcher"] .titlebar,
+html body div[class*="portal"] .titlebar,
+html body div[class*="theme"] .titlebar {
+    background-color: #1a237e !important; /* Dark blue background */
+    background: #1a237e !important; /* Fallback */
+    color: white !important;
+}
+
+/* Nuclear option - target ALL titlebars in case class names are different */
+html body .titlebar,
+html body [class*="title"],
+html body .header,
+html body [class*="header"] {
+    background-color: #1a237e !important; /* Dark blue background */
+    background-image: none !important;
+    border-top: none !important;
+    color: white !important;
+}
+
+/* Right menu background styling - Dark Green - SPECIFIC TARGETING ONLY */
+/* Target only the actual menu sidebar, not the entire portal */
+html body .resizeable-window .body .portal-menu,
+html body .resizeable-window .content .portal-menu,
+html body .resizeable-window .body .menu-container,
+html body .resizeable-window .content .menu-container,
+html body .portal-container .menu,
+html body .portal-sidebar,
+html body .portal .sidebar,
+html body .portal-right-menu,
+html body .portal .menu-content,
+html body .portal-menu-content,
+html body .themes-menu,
+html body .theme-switcher .menu,
+html body .theme-switcher-menu,
+html body .app-menu,
+html body .side-menu,
+html body .right-panel .menu,
+html body .menu-panel .menu,
+html body .navigation-menu,
+html body .portal-navigation .menu,
+html body .menu-sidebar,
+/* TARGET THE TOP RIGHT THEME SWITCHER SPECIFICALLY */
+html body .resizeable-window[data-role="ThemeSwitcher"] .body,
+html body .resizeable-window[data-role="ThemeSwitcher"] .content,
+html body .resizeable-window[data-role="Portal"] .body,
+html body .resizeable-window[data-role="Portal"] .content,
+html body .theme-switcher-container,
+html body .themes-container,
+html body .themes-panel,
+html body .theme-list,
+html body .theme-selection {
+    background-color: #1b5e20 !important; /* Dark green background */
+    background: #1b5e20 !important; /* Fallback */
+    color: white !important;
+}
+
+/* Target specific menu containers by their likely class patterns */
+html body .resizeable-window [class*="menu"]:not([class*="button"]):not([class*="item"]),
+html body .resizeable-window [class*="sidebar"]:not([class*="button"]):not([class*="item"]),
+html body .resizeable-window [class*="theme"]:not([class*="button"]):not([class*="item"]),
+html body .portal-container [class*="menu"]:not([class*="button"]):not([class*="item"]),
+html body .portal-container [class*="sidebar"]:not([class*="button"]):not([class*="item"]),
+html body .portal-container [class*="theme"]:not([class*="button"]):not([class*="item"]) {
+    background-color: #1b5e20 !important; /* Dark green background */
+    background: #1b5e20 !important; /* Fallback */
+    color: white !important;
+}
+
+/* Target menu items and links in the right menu - ULTRA AGGRESSIVE */
+html body .portal-menu a,
+html body .portal .menu a,
+html body .portal-menu .menu-item,
+html body .portal .menu .menu-item,
+html body .menu-container a,
+html body .menu-container .menu-item,
+html body .themes-menu a,
+html body .theme-switcher .menu a,
+html body .resizeable-window .menu a,
+html body .resizeable-window .menu .menu-item,
+html body .resizeable-window .body .portal-menu *,
+html body .resizeable-window .content .portal-menu *,
+html body .resizeable-window .body .menu-container *,
+html body .resizeable-window .content .menu-container *,
+html body .portal-sidebar *,
+html body .portal .sidebar *,
+html body .portal-right-menu *,
+html body .portal .menu-content *,
+html body .portal-menu-content *,
+html body .themes-menu *,
+html body .theme-switcher .menu *,
+html body .theme-switcher-menu * {
+    color: white !important;
+    background: transparent !important;
+    text-decoration: none !important;
+}
+
+/* NUCLEAR OPTION - Force white text on ALL elements within menu containers */
+html body .resizeable-window .body .portal-menu,
+html body .resizeable-window .content .portal-menu,
+html body .resizeable-window .body .menu-container,
+html body .resizeable-window .content .menu-container,
+html body .portal-sidebar,
+html body .portal .sidebar,
+html body .portal-right-menu,
+html body .portal .menu-content,
+html body .portal-menu-content,
+html body .themes-menu,
+html body .theme-switcher .menu,
+html body .theme-switcher-menu {
+    color: white !important;
+}
+
+/* Force white on absolutely EVERYTHING that could be text in menus */
+html body .resizeable-window .menu *,
+html body .portal-menu *,
+html body .menu-container *,
+html body .themes-menu *,
+html body .theme-switcher .menu *,
+html body .portal-sidebar *,
+html body .portal .sidebar *,
+html body .portal-right-menu *,
+html body .portal .menu-content *,
+html body .portal-menu-content *,
+/* TARGET THEME SWITCHER CONTENT SPECIFICALLY */
+html body .resizeable-window[data-role="ThemeSwitcher"] .body *,
+html body .resizeable-window[data-role="ThemeSwitcher"] .content *,
+html body .resizeable-window[data-role="Portal"] .body *,
+html body .resizeable-window[data-role="Portal"] .content *,
+html body .theme-switcher-container *,
+html body .themes-container *,
+html body .themes-panel *,
+html body .theme-list *,
+html body .theme-selection * {
+    color: white !important;
+}
+
+/* Target any text elements that might have inherited colors - AGGRESSIVE */
+html body .resizeable-window .menu span,
+html body .resizeable-window .menu div,
+html body .resizeable-window .menu p,
+html body .resizeable-window .menu li,
+html body .resizeable-window .menu ul,
+html body .resizeable-window .menu button,
+html body .resizeable-window .menu input,
+html body .resizeable-window .menu label,
+html body .portal-menu span,
+html body .portal-menu div,
+html body .portal-menu p,
+html body .portal-menu li,
+html body .portal-menu ul,
+html body .portal-menu button,
+html body .portal-menu input,
+html body .portal-menu label,
+html body .menu-container span,
+html body .menu-container div,
+html body .menu-container p,
+html body .menu-container li,
+html body .menu-container ul,
+html body .menu-container button,
+html body .menu-container input,
+html body .menu-container label {
+    color: white !important;
+}
+
+/* Menu item hover effects */
+html body .portal-menu a:hover,
+html body .portal .menu a:hover,
+html body .portal-menu .menu-item:hover,
+html body .portal .menu .menu-item:hover,
+html body .menu-container a:hover,
+html body .menu-container .menu-item:hover,
+html body .resizeable-window .menu a:hover,
+html body .resizeable-window .menu .menu-item:hover {
+    background-color: #2e7d32 !important; /* Lighter green on hover */
+    color: white !important;
+}
+
+/* Override any gradient or other background properties for menus only */
+html body .resizeable-window [class*="menu"]:not([class*="button"]):not([class*="item"]),
+html body .portal-container [class*="menu"]:not([class*="button"]):not([class*="item"]) {
+    background-image: none !important;
+}
+
+/* ULTIMATE NUCLEAR OPTION - Target ALL window bodies */
+html body .resizeable-window .body,
+html body .resizeable-window .content,
+html body .window .body,
+html body .window .content,
+html body .dialog .body,
+html body .dialog .content,
+html body .modal .body,
+html body .modal .content,
+html body .popup .body,
+html body .popup .content {
+    background-color: #1b5e20 !important; /* Dark green background */
+    background: #1b5e20 !important; /* Fallback */
+    color: white !important;
+}
+
+/* Target the entire resizeable window if it's a Portal or ThemeSwitcher */
+html body .resizeable-window[data-role="Portal"],
+html body .resizeable-window[data-role="ThemeSwitcher"],
+html body .resizeable-window[data-role="portal"],
+html body .resizeable-window[data-role="themeswitcher"] {
+    background-color: #1b5e20 !important; /* Dark green background */
+    background: #1b5e20 !important; /* Fallback */
+    color: white !important;
+}
+
+/* Force ALL text in ALL windows to be white */
+html body .resizeable-window .body *,
+html body .resizeable-window .content *,
+html body .window .body *,
+html body .window .content *,
+html body .dialog .body *,
+html body .dialog .content * {
+    color: white !important;
+}
