@@ -344,10 +344,12 @@
       {
         "name": "Portal",
         "cfg": {
-          "logo": "logo.svg",
-          "topBarText": "BBT Database",
+          "logo": "marbefes-logo.svg",
+          "topBarText": "MARBEFES BBT Database",
           "showMenuOnStartup": true,
           "keepMenuOpen": true,
+          "showFilterField": true,
+          "filterFieldPlaceholder": "Filter BBTs",
           "bottomBarLinks": [
               {"href": "https://marbefes.eu", "label": "MARBEFES Homepage", "target": "_blank"},
               {"href": "https://qgis.org", "label": "QGIS.org"}
@@ -358,7 +360,21 @@
                 {"icon": "link", "title": "qwc2", "url": "https://github.com/qgis/qwc2/"},
                 {"icon": "link", "title": "qwc-docker", "url": "https://github.com/qwc-services/qwc-docker"},
                 {"icon": "link", "title": "qgis.org", "url": "https://qgis.org"}
-              ]}
+              ]},
+              {"key": "Resources", "icon": "info", "title": "Resources", "subitems": [
+                {"icon": "info", "title": "User Guide", "url": "https://marbefes.eu/guide", "target": "_blank"},
+                {"icon": "info", "title": "Documentation", "url": "https://marbefes.eu/docs", "target": "_blank"},
+                {"icon": "info", "title": "FAQ", "url": "https://marbefes.eu/faq", "target": "_blank"},
+                {"icon": "info", "title": "Contact Support", "url": "https://marbefes.eu/contact", "target": "_blank"}
+              ]},
+              {"key": "About", "icon": "info", "title": "About", "subitems": [
+                {"icon": "info", "title": "Project Overview", "url": "https://marbefes.eu/about", "target": "_blank"},
+                {"icon": "info", "title": "Partners", "url": "https://marbefes.eu/partners", "target": "_blank"},
+                {"icon": "info", "title": "Funding", "url": "https://marbefes.eu/funding", "target": "_blank"},
+                {"icon": "info", "title": "Publications", "url": "https://marbefes.eu/publications", "target": "_blank"}
+              ]},
+              {"title": "Data Download", "icon": "download", "url": "https://marbefes.eu/downloads", "target": "_blank"},
+              {"title": "API Documentation", "icon": "code", "url": "https://marbefes.eu/api", "target": "_blank"}
           ]
         }
       },
@@ -385,7 +401,7 @@
         "name": "TopBar",
         "cfg": {
           "menuItems": [
-            {"key": "Portal", "icon": "themes"},
+            {"key": "Portal", "icon": "database"},
             {"key": "ThemeSwitcher", "icon": "themes", "shortcut": "alt+shift+t"},
             {"key": "LayerTree", "icon": "layers", "shortcut": "alt+shift+l"},
             {"key": "MapLegend", "icon": "list-alt"},
@@ -488,7 +504,8 @@
       {
         "name": "ThemeSwitcher",
         "cfg": {
-          "collapsibleGroups": true
+          "collapsibleGroups": true,
+          "themeFilterPlaceholder": "Filter BBTs"
         }
       },
       {
