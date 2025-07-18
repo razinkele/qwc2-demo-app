@@ -581,7 +581,7 @@
         "cfg": {
           "task": "Data",
           "icon": "database",
-          "tooltip": "Data Portal",
+          "tooltip": "Data Portal 2",
           "position": 6,
           "className": "data-portal-button"
         }
@@ -591,7 +591,7 @@
         "cfg": {
           "task": "Bowtie",
           "icon": "butterfly",
-          "tooltip": "Bowtie Analysis",
+          "tooltip": "Bowtie Analysis 2",
           "position": 7,
           "className": "bowtie-analysis-button"
         }
