@@ -55,8 +55,8 @@
         /* FORCE BUTTON POSITIONING - Data and Bowtie buttons */
         
         /* Target by position - force last buttons to left side */
-        .toolbar-right > *:nth-last-child(1),
-        .toolbar-right > *:nth-last-child(2) {
+        .bowtie-analysis-button,
+        .data-portal-button {
             position: fixed !important;
             left: 10px !important;
             z-index: 9999 !important;
@@ -69,7 +69,7 @@
         
         
         /* Alternative targeting by any attribute containing our keywords */
-        *[title*="Data" i] {
+        .bowtie-analysis-button {
             position: fixed !important;
             left: 10px !important;
             top: 100px !important;
@@ -78,7 +78,7 @@
             z-index: 9999 !important;
         }
         
-        *[title*="Bowtie" i] {
+         .data-portal-button{
             position: fixed !important;
             left: 10px !important;
             top: 160px !important;
