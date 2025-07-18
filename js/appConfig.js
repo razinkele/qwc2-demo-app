@@ -63,6 +63,10 @@ import RedliningSupport from 'qwc2/plugins/map/RedliningSupport';
 import SnappingSupport from 'qwc2/plugins/map/SnappingSupport';
 import BufferSupport from 'qwc2/plugins/redlining/RedliningBufferSupport';
 
+import DataPortalPlugin from './DataPortalPlugin';
+import BowtieAnalysisPlugin from './BowtieAnalysisPlugin';
+import CustomDashboardPlugin from './CustomDashboardPlugin';
+
 import defaultLocaleData from '../static/translations/en-US.json';
 import {customAttributeCalculator, attributeTransform, customExporters} from './IdentifyExtensions';
 
@@ -134,6 +138,9 @@ export default {
             View3DPlugin: View3DPlugin,
             ZoomInPlugin: ZoomInPlugin,
             ZoomOutPlugin: ZoomOutPlugin,
+            DataPortalPlugin: DataPortalPlugin,
+            BowtieAnalysisPlugin: BowtieAnalysisPlugin,
+            CustomDashboardPlugin: CustomDashboardPlugin,
         },
         cfg: {
             IdentifyPlugin: {

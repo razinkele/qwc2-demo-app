@@ -1,14 +1,86 @@
 /* Custom positioning for Data and Bowtie buttons - aggressive targeting */
+/* CACHE BUSTER: 2025-07-18-16-15 */
+/* ULTRA AGGRESSIVE THEME VIEWER BUTTON TARGETING */
+
+/* Target theme viewer buttons by icon class - NUCLEAR OPTION */
+.resizeable-window .icon-database,
+.resizeable-window .icon-chart,
+.resizeable-window .icon-dashboard,
+.portal .icon-database,
+.portal .icon-chart,
+.portal .icon-dashboard,
+.theme-switcher .icon-database,
+.theme-switcher .icon-chart,
+.theme-switcher .icon-dashboard {
+    position: fixed !important;
+    left: 10px !important;
+    background-color: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+    border-radius: 6px !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 9999 !important;
+    padding: 8px !important;
+}
+
+.resizeable-window .icon-database,
+.portal .icon-database,
+.theme-switcher .icon-database {
+    top: 100px !important;
+}
+
+.resizeable-window .icon-chart,
+.portal .icon-chart,
+.theme-switcher .icon-chart {
+    top: 160px !important;
+}
+
+.resizeable-window .icon-dashboard,
+.portal .icon-dashboard,
+.theme-switcher .icon-dashboard {
+    top: 220px !important;
+}
+
+/* Custom dashboard button styling - ULTRA AGGRESSIVE */
+.custom-dashboard-button,
+html body .custom-dashboard-button,
+html body button.custom-dashboard-button,
+html body .toolbar .custom-dashboard-button,
+html body .toolbar-right .custom-dashboard-button,
+html body .map-button.custom-dashboard-button,
+body .custom-dashboard-button,
+*[class*="custom-dashboard-button"] {
+    position: fixed !important;
+    left: 10px !important;
+    top: 220px !important;
+    background-color: #9C27B0 !important;
+    background: #9C27B0 !important;
+    border: 2px solid #7B1FA2 !important;
+    border-color: #7B1FA2 !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3) !important;
+    border-radius: 6px !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 9999 !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 /* Hide ALL text input fields in app menu/portal */
 .app-menu input,
 .portal input,
 .themes input {
     display: none !important;
 }
-/* Debug: Show all buttons with borders to identify them */
-button, .button, [role="button"] {
-    /* border: 1px solid red !important; */
-}
+/* Debug: Show all buttons with borders to identify them - DISABLED */
+/* button, .button, [role="button"] {
+    border: 1px solid red !important;
+} */
 
 /* Theme Viewer/Switcher left button - CHANGE TO RED */
 .theme-switcher button:first-child,
@@ -34,6 +106,157 @@ button, .button, [role="button"] {
     color: white !important;
 }
 
+/* RESET theme viewer and portal buttons to normal positioning - BUT ALLOW LEFT POSITIONING */
+.resizeable-window button,
+.portal button,
+.theme-switcher button,
+.themes-panel button,
+.portal-menu button,
+.theme-list button,
+.theme-selection button,
+.resizeable-window[data-role="Portal"] button,
+.resizeable-window[data-role="ThemeSwitcher"] button {
+    position: static !important;
+    right: auto !important;
+    width: auto !important;
+    height: auto !important;
+    z-index: auto !important;
+    background-color: initial !important;
+    border: initial !important;
+    border-radius: initial !important;
+    box-shadow: initial !important;
+}
+
+/* Allow theme viewer buttons to be positioned on the left side - TARGET ACTUAL STRUCTURE */
+/* Target the button containers in theme viewer by data-slot */
+.resizeable-window .map-button-container[data-slot="6"],
+.resizeable-window .map-button-container[data-slot="7"],
+.portal .map-button-container[data-slot="6"],
+.portal .map-button-container[data-slot="7"],
+.theme-switcher .map-button-container[data-slot="6"],
+.theme-switcher .map-button-container[data-slot="7"] {
+    position: fixed !important;
+    left: 10px !important;
+    z-index: 9999 !important;
+    order: initial !important;
+}
+
+/* Target the actual map-button elements in theme viewer */
+.resizeable-window .map-button-container .map-button,
+.portal .map-button-container .map-button,
+.theme-switcher .map-button-container .map-button,
+/* Also target by title attribute */
+.resizeable-window button[title*="Data"],
+.resizeable-window button[title*="Bowtie"],
+.portal button[title*="Data"],
+.portal button[title*="Bowtie"],
+.theme-switcher button[title*="Data"],
+.theme-switcher button[title*="Bowtie"] {
+    position: fixed !important;
+    left: 10px !important;
+    background-color: #4CAF50 !important;
+    background: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
+    border-color: #388E3C !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+    border-radius: 6px !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 9999 !important;
+}
+
+/* Specific positioning for data portal button in theme viewer - TARGET DATA-SLOT=6 */
+.resizeable-window .map-button-container[data-slot="6"],
+.portal .map-button-container[data-slot="6"],
+.theme-switcher .map-button-container[data-slot="6"],
+.resizeable-window button[title*="Data"],
+.portal button[title*="Data"],
+.theme-switcher button[title*="Data"] {
+    top: 100px !important;
+}
+
+/* Specific positioning for bowtie button in theme viewer - TARGET DATA-SLOT=7 */
+.resizeable-window .map-button-container[data-slot="7"],
+.portal .map-button-container[data-slot="7"],
+.theme-switcher .map-button-container[data-slot="7"],
+.resizeable-window button[title*="Bowtie"],
+.portal button[title*="Bowtie"],
+.theme-switcher button[title*="Bowtie"] {
+    top: 160px !important;
+}
+
+/* Exception: Keep red theme viewer navigation buttons but in normal position */
+.resizeable-window .theme-switcher button:first-child,
+.resizeable-window .themes-panel button:first-child,
+.resizeable-window .portal-menu button:first-child,
+.resizeable-window .theme-list button:first-child,
+.resizeable-window .theme-selection button:first-child {
+    background-color: #F44336 !important; /* Red color */
+    border-color: #D32F2F !important; /* Darker red border */
+    color: white !important;
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* ALSO apply green styling to theme viewer buttons with data/bowtie in titles */
+.resizeable-window button[title*="Data"],
+.resizeable-window button[title*="Portal"],
+.resizeable-window button[title*="data"],
+.resizeable-window button[title*="portal"],
+.portal button[title*="Data"],
+.portal button[title*="Portal"],
+.portal button[title*="data"],
+.portal button[title*="portal"],
+.theme-switcher button[title*="Data"],
+.theme-switcher button[title*="Portal"],
+.theme-switcher button[title*="data"],
+.theme-switcher button[title*="portal"] {
+    position: fixed !important;
+    left: 10px !important;
+    top: 100px !important;
+    background-color: #4CAF50 !important;
+    background: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
+    border-color: #388E3C !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+    border-radius: 6px !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 9999 !important;
+}
+
+.resizeable-window button[title*="Bowtie"],
+.resizeable-window button[title*="Analysis"],
+.resizeable-window button[title*="bowtie"],
+.resizeable-window button[title*="analysis"],
+.portal button[title*="Bowtie"],
+.portal button[title*="Analysis"],
+.portal button[title*="bowtie"],
+.portal button[title*="analysis"],
+.theme-switcher button[title*="Bowtie"],
+.theme-switcher button[title*="Analysis"],
+.theme-switcher button[title*="bowtie"],
+.theme-switcher button[title*="analysis"] {
+    position: fixed !important;
+    left: 10px !important;
+    top: 160px !important;
+    background-color: #4CAF50 !important;
+    background: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
+    border-color: #388E3C !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+    border-radius: 6px !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 9999 !important;
+}
+
 /* Hover state for theme viewer left button */
 .theme-switcher button:first-child:hover,
 .themes-panel button:first-child:hover,
@@ -47,73 +270,65 @@ button, .button, [role="button"] {
     border-color: #B71C1C !important;
 }
 
-/* Target ANY button that contains "Data" or "database" */
-*[title*="Data" i],
-*[title*="Portal" i],
-*[class*="data" i],
-*[class*="database" i],
-button:contains("Data"),
-.map-button:contains("Data"),
-button[title*="Data" i],
-.toolbar button:nth-last-child(1),
-.toolbar button:nth-last-child(2),
-.toolbar-right button:nth-last-child(1),
-.toolbar-right button:nth-last-child(2) {
+/* Target ONLY toolbar buttons that contain "Data" or "database" - NOT portal buttons */
+.toolbar *[title*="Data" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar *[title*="Portal" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar *[class*="data" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar *[class*="database" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar button:contains("Data"):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.map-button:contains("Data"):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar button[title*="Data" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar button:nth-last-child(1):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar button:nth-last-child(2):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar-right button:nth-last-child(1):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar-right button:nth-last-child(2):not(.resizeable-window *):not(.portal *):not(.theme-switcher *) {
     position: fixed !important;
     left: 10px !important;
     top: 100px !important;
     right: auto !important;
     z-index: 9999 !important;
-    background-color: #2196F3 !important;
-    border: 2px solid #1976D2 !important;
+    background-color: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
     color: white !important;
-    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3) !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
     border-radius: 6px !important;
     width: 40px !important;
     height: 40px !important;
 }
 
-/* Target ANY button that contains "Bowtie" or "chart" - RED COLOR */
-*[title*="Bowtie" i],
-*[title*="Analysis" i],
-*[class*="bowtie" i],
-*[class*="chart" i],
-button:contains("Bowtie"),
-.map-button:contains("Bowtie"),
-button[title*="Bowtie" i],
-.toolbar button:nth-child(6),
-.toolbar button:nth-child(7),
-.toolbar-right button:nth-child(6),
-.toolbar-right button:nth-child(7) {
+/* Target ONLY toolbar buttons that contain "Bowtie" or "chart" - NOT portal buttons */
+.toolbar *[title*="Bowtie" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar *[title*="Analysis" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar *[class*="bowtie" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar *[class*="chart" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar button:contains("Bowtie"):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.map-button:contains("Bowtie"):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar button[title*="Bowtie" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar button:nth-child(6):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar button:nth-child(7):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar-right button:nth-child(6):not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar-right button:nth-child(7):not(.resizeable-window *):not(.portal *):not(.theme-switcher *) {
     position: fixed !important;
     left: 10px !important;
     top: 160px !important;
     right: auto !important;
     z-index: 9999 !important;
-    background-color: #F44336 !important;
-    border: 2px solid #D32F2F !important;
+    background-color: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
     color: white !important;
-    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3) !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
     border-radius: 6px !important;
     width: 40px !important;
     height: 40px !important;
 }
 
-/* Universal approach - target ALL buttons in toolbar and check for our specific ones */
-.toolbar button,
-.toolbar-right button,
-.map-button,
-button[class*="button"] {
-    /* Check if this is our target button and override */
-}
-
-/* Force positioning for buttons at specific positions */
+/* Force positioning for buttons at specific positions - ONLY in toolbar */
 .toolbar > *:nth-child(6),
 .toolbar-right > *:nth-child(6) {
     position: fixed !important;
     left: 10px !important;
     top: 100px !important;
-    background-color: #2196F3 !important;
+    background-color: #4CAF50 !important;
     z-index: 9999 !important;
 }
 
@@ -122,28 +337,134 @@ button[class*="button"] {
     position: fixed !important;
     left: 10px !important;
     top: 160px !important;
-    background-color: #F44336 !important;
+    background-color: #4CAF50 !important;
     z-index: 9999 !important;
 }
 
-/* Nuclear option - target ANY element with database or chart icons */
-*[class*="database" i],
-*[class*="chart" i],
-.icon-database,
-.icon-chart {
+/* Nuclear option - target ONLY toolbar elements with database or chart icons - NOT portal */
+.toolbar *[class*="database" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar *[class*="chart" i]:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar .icon-database:not(.resizeable-window *):not(.portal *):not(.theme-switcher *),
+.toolbar .icon-chart:not(.resizeable-window *):not(.portal *):not(.theme-switcher *) {
     position: fixed !important;
     left: 10px !important;
     z-index: 9999 !important;
-    background-color: #2196F3 !important;
+    background-color: #4CAF50 !important;
 }
 
-.icon-database {
+/* Bowtie Analysis button styling - ULTRA AGGRESSIVE */
+.bowtie-analysis-button,
+html body .bowtie-analysis-button,
+html body button.bowtie-analysis-button,
+html body .toolbar .bowtie-analysis-button,
+html body .toolbar-right .bowtie-analysis-button,
+html body .map-button.bowtie-analysis-button,
+body .bowtie-analysis-button,
+*[class*="bowtie-analysis-button"] {
+    position: fixed !important;
+    left: 10px !important;
+    top: 160px !important;
+    background-color: #4CAF50 !important;
+    background: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
+    border-color: #388E3C !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+    border-radius: 6px !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 9999 !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Specific styling for data-portal-button class - ULTRA AGGRESSIVE */
+.data-portal-button,
+html body .data-portal-button,
+html body button.data-portal-button,
+html body .toolbar .data-portal-button,
+html body .toolbar-right .data-portal-button,
+html body .map-button.data-portal-button,
+body .data-portal-button,
+*[class*="data-portal-button"] {
+    position: fixed !important;
+    left: 10px !important;
+    top: 100px !important;
+    background-color: #4CAF50 !important;
+    background: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
+    border-color: #388E3C !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+    border-radius: 6px !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 9999 !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.icon-database:not(.resizeable-window .icon-database):not(.portal .icon-database) {
     top: 100px !important;
 }
 
-.icon-chart {
+.icon-chart:not(.resizeable-window .icon-chart):not(.portal .icon-chart) {
     top: 160px !important;
-    background-color: #F44336 !important;
+    background-color: #4CAF50 !important;
+}
+
+/* NUCLEAR OPTION - Force any button with these exact class names - ONLY outside portal */
+.toolbar button[class="bowtie-analysis-button"]:not(.resizeable-window *):not(.portal *),
+.toolbar button[class*="bowtie-analysis-button"]:not(.resizeable-window *):not(.portal *),
+.toolbar *[class="bowtie-analysis-button"]:not(.resizeable-window *):not(.portal *),
+.toolbar *[class*="bowtie-analysis-button"]:not(.resizeable-window *):not(.portal *) {
+    position: fixed !important;
+    left: 10px !important;
+    top: 160px !important;
+    background-color: #4CAF50 !important;
+    background: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
+    color: white !important;
+    z-index: 9999 !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 6px !important;
+}
+
+.toolbar button[class="data-portal-button"]:not(.resizeable-window *):not(.portal *),
+.toolbar button[class*="data-portal-button"]:not(.resizeable-window *):not(.portal *),
+.toolbar *[class="data-portal-button"]:not(.resizeable-window *):not(.portal *),
+.toolbar *[class*="data-portal-button"]:not(.resizeable-window *):not(.portal *) {
+    position: fixed !important;
+    left: 10px !important;
+    top: 100px !important;
+    background-color: #4CAF50 !important;
+    background: #4CAF50 !important;
+    border: 2px solid #388E3C !important;
+    color: white !important;
+    z-index: 9999 !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 6px !important;
+}
+
+/* Hover states to maintain colors */
+.bowtie-analysis-button:hover,
+html body .bowtie-analysis-button:hover,
+button.bowtie-analysis-button:hover {
+    background-color: #388E3C !important;
+    background: #388E3C !important;
+}
+
+.data-portal-button:hover,
+html body .data-portal-button:hover,
+button.data-portal-button:hover {
+    background-color: #388E3C !important;
+    background: #388E3C !important;
 }
 
 /* Portal title background styling - AGGRESSIVE OVERRIDE */
