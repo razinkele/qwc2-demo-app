@@ -590,7 +590,7 @@
         "name": "TaskButton",
         "cfg": {
           "task": "Bowtie",
-          "icon": "chart",
+          "icon": "butterfly",
           "tooltip": "Bowtie Analysis",
           "position": 7,
           "className": "bowtie-analysis-button"
