@@ -772,3 +772,107 @@ html body .dialog .body *,
 html body .dialog .content * {
     color: white !important;
 }
+
+/* YELLOW STYLING FOR CUSTOM TOOL BUTTONS - HIGH VISIBILITY */
+/* Updated: 2025-07-19 - Yellow theme for better visibility */
+
+/* TopBar menu items for custom plugins */
+.topbar button[title="Data Portal"],
+.topbar button[title*="Data Portal"],
+.topbar .icon-catalog,
+.topbar button[title="BowTie Analysis"],
+.topbar button[title*="BowTie"],
+.topbar .icon-butterfly,
+.topbar button[title="Custom Dashboard"],
+.topbar button[title*="Dashboard"],
+.topbar .icon-tools,
+.topbar button[title="Test Plugin"],
+.topbar button[title*="Test"],
+.topbar .icon-ok,
+/* TaskButton styling for custom plugins */
+.data-portal-button,
+.bowtie-analysis-button,
+.custom-dashboard-button,
+.test-plugin-button,
+/* Generic class targeting */
+button[class*="data-portal"],
+button[class*="bowtie"],
+button[class*="dashboard"],
+button[class*="test-plugin"],
+/* Title-based targeting */
+button[title*="Data Portal"],
+button[title*="BowTie"],
+button[title*="Dashboard"],
+button[title*="Test Plugin"],
+/* Icon-based targeting */
+.icon-catalog,
+.icon-butterfly,
+.icon-tools,
+.icon-ok {
+    background-color: #FFD700 !important; /* Bright yellow */
+    color: #000000 !important; /* Black text for contrast */
+    border: 2px solid #FFA500 !important; /* Orange border */
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4) !important;
+    font-weight: bold !important;
+}
+
+/* Hover effects for yellow buttons */
+.topbar button[title="Data Portal"]:hover,
+.topbar button[title*="Data Portal"]:hover,
+.topbar button[title="BowTie Analysis"]:hover,
+.topbar button[title*="BowTie"]:hover,
+.topbar button[title="Custom Dashboard"]:hover,
+.topbar button[title*="Dashboard"]:hover,
+.topbar button[title="Test Plugin"]:hover,
+.topbar button[title*="Test"]:hover,
+.data-portal-button:hover,
+.bowtie-analysis-button:hover,
+.custom-dashboard-button:hover,
+.test-plugin-button:hover,
+button[class*="data-portal"]:hover,
+button[class*="bowtie"]:hover,
+button[class*="dashboard"]:hover,
+button[class*="test-plugin"]:hover,
+button[title*="Data Portal"]:hover,
+button[title*="BowTie"]:hover,
+button[title*="Dashboard"]:hover,
+button[title*="Test Plugin"]:hover,
+.icon-catalog:hover,
+.icon-butterfly:hover,
+.icon-tools:hover,
+.icon-ok:hover {
+    background-color: #FFED4E !important; /* Lighter yellow on hover */
+    border-color: #FF8C00 !important; /* Darker orange border on hover */
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.6) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Active/pressed state for yellow buttons */
+.topbar button[title="Data Portal"]:active,
+.topbar button[title*="Data Portal"]:active,
+.topbar button[title="BowTie Analysis"]:active,
+.topbar button[title*="BowTie"]:active,
+.topbar button[title="Custom Dashboard"]:active,
+.topbar button[title*="Dashboard"]:active,
+.topbar button[title="Test Plugin"]:active,
+.topbar button[title*="Test"]:active,
+.data-portal-button:active,
+.bowtie-analysis-button:active,
+.custom-dashboard-button:active,
+.test-plugin-button:active,
+button[class*="data-portal"]:active,
+button[class*="bowtie"]:active,
+button[class*="dashboard"]:active,
+button[class*="test-plugin"]:active,
+button[title*="Data Portal"]:active,
+button[title*="BowTie"]:active,
+button[title*="Dashboard"]:active,
+button[title*="Test Plugin"]:active,
+.icon-catalog:active,
+.icon-butterfly:active,
+.icon-tools:active,
+.icon-ok:active {
+    background-color: #DAA520 !important; /* Darker yellow when pressed */
+    border-color: #FF6347 !important; /* Red-orange border when pressed */
+    transform: translateY(1px) !important;
+}

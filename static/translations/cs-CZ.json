@@ -4,6 +4,9 @@
     "appmenu": {
       "items": {
         "ExternalLink": "",
+        "DataPortal": "",
+        "BowtieAnalysis": "",
+        "CustomDashboard": "",
         "Bookmark": "Záložky",
         "Compare3D": "",
         "Editing": "Úpravy",

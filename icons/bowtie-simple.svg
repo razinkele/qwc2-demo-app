@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <style>
+      .bowtie-simple {
+        fill: currentColor;
+        stroke: none;
+      }
+    </style>
+  </defs>
+  
+  <!-- Left triangle -->
+  <path class="bowtie-simple" d="M2 6 L10 12 L2 18 Z"/>
+  
+  <!-- Right triangle -->
+  <path class="bowtie-simple" d="M22 6 L14 12 L22 18 Z"/>
+  
+  <!-- Center circle/knot -->
+  <circle class="bowtie-simple" cx="12" cy="12" r="2"/>
+</svg>

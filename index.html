@@ -10,6 +10,36 @@
         <link rel="stylesheet" type="text/css" href="assets/css/qwc2.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/colorschemes.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/custom-buttons.css" />
+        <script src="debug.js"></script>
+        <script>
+            console.log('=== INLINE SCRIPT EXECUTING ===');
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('=== DOM CONTENT LOADED ===');
+                
+                // Create a visible indicator
+                const indicator = document.createElement('div');
+                indicator.id = 'js-indicator';
+                indicator.style.cssText = 'position: fixed; top: 10px; right: 10px; background: red; color: white; padding: 10px; z-index: 99999; font-size: 14px;';
+                indicator.textContent = 'JavaScript is working!';
+                document.body.appendChild(indicator);
+                
+                // Log button information
+                setTimeout(() => {
+                    const buttons = document.querySelectorAll('button');
+                    console.log('=== FOUND BUTTONS ===', buttons.length);
+                    
+                    // Add click handlers to all buttons
+                    buttons.forEach((btn, i) => {
+                        console.log(`Button ${i}:`, btn.textContent?.trim(), btn.title);
+                        btn.addEventListener('click', (e) => {
+                            console.log('=== BUTTON CLICKED ===', btn.title || btn.textContent);
+                            indicator.textContent = `Clicked: ${btn.title || btn.textContent}`;
+                            indicator.style.background = 'green';
+                        });
+                    });
+                }, 3000);
+            });
+        </script>
         <link rel="apple-touch-icon" href="assets/img/app_icon.png"/>
         <link rel="apple-touch-icon" sizes="72x72" href="assets/img/app_icon_72.png"/>
         <link rel="apple-touch-icon" sizes="114x114" href="assets/img/app_icon_114.png"/>

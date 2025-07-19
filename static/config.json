@@ -36,6 +36,7 @@
   "wmsMaxGetUrlLength": 2048,
   "qgisServerVersion": 3,
   "defaultColorScheme": "default",
+  "cacheVersion": "20250718-v2",
   "username": "admin",
   "defaultFeatureStyle": {
     "strokeColor": [0, 0, 255, 1],
@@ -300,7 +301,13 @@
           ],
           "menuItems": [
               {"title": "MARBEFES Homepage", "icon": "info", "url": "https://marbefes.eu", "target": "_blank"},
-              {"key": "Tools", "icon": "tools", "title": "Links", "subitems": [
+              {"key": "Tools", "icon": "tools", "title": "MARBEFES Tools", "subitems": [
+                {"task": "DataPortalPlugin", "icon": "catalog", "title": "Data Portal"},
+                {"task": "BowtieAnalysisPlugin", "title": "BowTie Analysis", "icon": "butterfly"},
+                {"task": "CustomDashboardPlugin", "icon": "tools", "title": "Custom Dashboard"},
+                {"task": "TestPlugin", "icon": "ok", "title": "Test Plugin"}
+              ]},
+              {"key": "Links", "icon": "link", "title": "Links", "subitems": [
                 {"icon": "link", "title": "qwc2", "url": "https://github.com/qgis/qwc2/"},
                 {"icon": "link", "title": "qwc-docker", "url": "https://github.com/qwc-services/qwc-docker"},
                 {"icon": "link", "title": "qgis.org", "url": "https://qgis.org"}
@@ -353,6 +360,11 @@
             {"key": "FeatureSearch", "icon": "search"},
             {"key": "Share", "icon": "share", "shortcut": "alt+shift+s"},
             {"key": "Bookmark", "icon": "bookmark", "shortcut": "alt+shift+b"},
+            {"key": "DataPortal", "task": "DataPortalPlugin", "icon": "catalog", "shortcut": "alt+shift+d"},
+            {"key": "BowtieAnalysis", "task": "BowtieAnalysisPlugin", "icon": "butterfly", "shortcut": "alt+shift+a"},
+            {"key": "CustomDashboard", "task": "CustomDashboardPlugin", "icon": "tools", "shortcut": "alt+shift+u"},
+            {"key": "TestPlugin", "task": "TestPlugin", "icon": "ok", "shortcut": "alt+shift+x"},
+            {"key": "DebugPlugin", "task": "DebugPlugin", "icon": "cog", "shortcut": "alt+shift+z"},
             {"key": "Tools", "icon": "tools", "subitems": [
               {"key": "Identify", "icon": "identify_region", "mode": "Region"},
               {"key": "TimeManager", "icon": "clock"},
@@ -367,9 +379,6 @@
             {"key": "Print", "icon": "print", "shortcut": "alt+shift+p"},
             {"key": "Help", "icon": "info", "shortcut": "alt+shift+h"},
             {"key": "Settings", "icon": "cog"},
-            {"key": "DataPortal", "icon": "database"},
-            {"key": "BowtieAnalysis", "icon": "chart"},
-            {"key": "CustomDashboard", "icon": "dashboard"},
             {"title": "Homepage", "icon": "link", "url": "https://marbefes.eu", "target": "_blank"}
           ],
           "searchOptions": {
@@ -474,6 +483,26 @@
           "stepUnits": ["s", "m", "h", "d", "M", "y", "10y", "100y"],
           "defaultTimelineDisplay": "features"
         }
+      },
+      {
+        "name": "DataPortal",
+        "cfg": {}
+      },
+      {
+        "name": "BowtieAnalysis",
+        "cfg": {}
+      },
+      {
+        "name": "CustomDashboard",
+        "cfg": {}
+      },
+      {
+        "name": "Test",
+        "cfg": {}
+      },
+      {
+        "name": "Debug",
+        "cfg": {}
       }
 
     ],
@@ -526,8 +555,8 @@
       {
         "name": "TaskButton",
         "cfg": {
-          "task": "DataPortal",
-          "icon": "database",
+          "task": "DataPortalPlugin",
+          "icon": "catalog",
           "tooltip": "Data Portal",
           "position": 6,
           "className": "data-portal-button"
@@ -536,9 +565,9 @@
       {
         "name": "TaskButton",
         "cfg": {
-          "task": "BowtieAnalysis",
-          "icon": "chart",
-          "tooltip": "Bowtie Analysis",
+          "task": "BowtieAnalysisPlugin",
+          "icon": "butterfly",
+          "tooltip": "BowTie Analysis of current BBT",
           "position": 7,
           "className": "bowtie-analysis-button"
         }
@@ -546,11 +575,21 @@
       {
         "name": "TaskButton",
         "cfg": {
-          "task": "CustomDashboard",
-          "icon": "dashboard",
+          "task": "CustomDashboardPlugin",
+          "icon": "tools",
           "tooltip": "Custom Dashboard",
           "position": 8,
           "className": "custom-dashboard-button"
+        }
+      },
+      {
+        "name": "TaskButton",
+        "cfg": {
+          "task": "TestPlugin",
+          "icon": "ok",
+          "tooltip": "Test Plugin",
+          "position": 9,
+          "className": "test-plugin-button"
         }
       },
       {

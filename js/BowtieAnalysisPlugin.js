@@ -1,4 +1,4 @@
-/**
+ /**
  * Copyright 2025 MARBEFES
  * Bowtie Analysis Plugin for QWC2
  */
@@ -7,10 +7,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import TaskBar from 'qwc2/components/TaskBar';
+import {setCurrentTask} from 'qwc2/actions/task';
 
 class BowtieAnalysis extends React.Component {
     static propTypes = {
-        active: PropTypes.bool
+        active: PropTypes.bool,
+        setCurrentTask: PropTypes.func
     };
 
     constructor(props) {
@@ -48,7 +50,7 @@ class BowtieAnalysis extends React.Component {
         }
 
         return (
-            <TaskBar onHide={this.quit} task="BowtieAnalysis" title="Bowtie Risk Analysis">
+            <TaskBar onHide={this.quit} task="BowtieAnalysisPlugin" title="Bowtie Risk Analysis">
                 <div role="body" style={{
                     padding: '20px',
                     maxHeight: '80vh',
@@ -430,10 +432,17 @@ class BowtieAnalysis extends React.Component {
     };
 }
 
-const BowtieAnalysisPlugin = connect(state => ({
-    active: state.task.id === "BowtieAnalysis"
-}), {
-    setCurrentTask: (task) => ({type: 'SET_CURRENT_TASK', task})
+export default (cfg) => connect(state => {
+    console.log('BowtieAnalysisPlugin connect mapStateToProps:', {
+        currentTaskId: state.task?.id,
+        isBowtieAnalysisPlugin: state.task?.id === "BowtieAnalysisPlugin",
+        fullTaskState: state.task,
+        allState: state
+    });
+    
+    return {
+        active: state.task.id === "BowtieAnalysisPlugin"
+    };
+}, {
+    setCurrentTask: setCurrentTask
 })(BowtieAnalysis);
-
-export default BowtieAnalysisPlugin;

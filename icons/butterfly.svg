@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <style>
+      .butterfly-wing {
+        fill: currentColor;
+        stroke: none;
+      }
+      .butterfly-body {
+        fill: currentColor;
+        stroke: none;
+      }
+      .wing-pattern {
+        fill: currentColor;
+        opacity: 0.4;
+      }
+    </style>
+  </defs>
+  
+  <!-- Left upper wing -->
+  <path class="butterfly-wing" d="M12 12 C10 10, 8 8, 5 7 C2 6, 1 8, 2 10 C3 12, 5 11, 7 11 C9 11, 11 11, 12 12 Z"/>
+  
+  <!-- Left lower wing -->
+  <path class="butterfly-wing" d="M12 12 C10 14, 8 16, 5 17 C2 18, 1 16, 2 14 C3 12, 5 13, 7 13 C9 13, 11 13, 12 12 Z"/>
+  
+  <!-- Right upper wing -->
+  <path class="butterfly-wing" d="M12 12 C14 10, 16 8, 19 7 C22 6, 23 8, 22 10 C21 12, 19 11, 17 11 C15 11, 13 11, 12 12 Z"/>
+  
+  <!-- Right lower wing -->
+  <path class="butterfly-wing" d="M12 12 C14 14, 16 16, 19 17 C22 18, 23 16, 22 14 C21 12, 19 13, 17 13 C15 13, 13 13, 12 12 Z"/>
+  
+  <!-- Butterfly body -->
+  <ellipse class="butterfly-body" cx="12" cy="12" rx="0.8" ry="6"/>
+  
+  <!-- Antennae -->
+  <path class="butterfly-body" d="M12 6 C11.5 4, 10.5 3, 10 3 M12 6 C12.5 4, 13.5 3, 14 3" stroke="currentColor" stroke-width="0.8" fill="none"/>
+  
+  <!-- Wing patterns -->
+  <circle class="wing-pattern" cx="6" cy="9" r="1"/>
+  <circle class="wing-pattern" cx="6" cy="15" r="0.8"/>
+  <circle class="wing-pattern" cx="18" cy="9" r="1"/>
+  <circle class="wing-pattern" cx="18" cy="15" r="0.8"/>
+</svg>

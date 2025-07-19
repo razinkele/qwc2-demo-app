@@ -1,0 +1,28 @@
+.test-plugin-container {
+    padding: 20px;
+    max-width: 500px;
+}
+
+.test-plugin-container h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.test-plugin-container ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.test-plugin-container li {
+    margin: 5px 0;
+}
+
+.test-status {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}

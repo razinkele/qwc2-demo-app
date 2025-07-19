@@ -21,7 +21,10 @@
     "search.coordinates",
     "colorschemes.default",
     "colorschemes.dark",
-    "colorschemes.highcontrast"
+    "colorschemes.highcontrast",
+    "appmenu.items.DataPortal",
+    "appmenu.items.BowtieAnalysis",
+    "appmenu.items.CustomDashboard"
   ],
   "overrides": [],
   "strings": []

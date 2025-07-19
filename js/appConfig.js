@@ -66,6 +66,8 @@ import BufferSupport from 'qwc2/plugins/redlining/RedliningBufferSupport';
 import DataPortalPlugin from './DataPortalPlugin';
 import BowtieAnalysisPlugin from './BowtieAnalysisPlugin';
 import CustomDashboardPlugin from './CustomDashboardPlugin';
+import TestPlugin from './TestPlugin';
+import DebugPlugin from './DebugPlugin';
 
 import defaultLocaleData from '../static/translations/en-US.json';
 import {customAttributeCalculator, attributeTransform, customExporters} from './IdentifyExtensions';
@@ -138,9 +140,11 @@ export default {
             View3DPlugin: View3DPlugin,
             ZoomInPlugin: ZoomInPlugin,
             ZoomOutPlugin: ZoomOutPlugin,
-            DataPortalPlugin: DataPortalPlugin,
-            BowtieAnalysisPlugin: BowtieAnalysisPlugin,
-            CustomDashboardPlugin: CustomDashboardPlugin,
+            DataPortalPlugin: DataPortalPlugin(),
+            BowtieAnalysisPlugin: BowtieAnalysisPlugin(),
+            CustomDashboardPlugin: CustomDashboardPlugin(),
+            TestPlugin: TestPlugin(),
+            DebugPlugin: DebugPlugin()
         },
         cfg: {
             IdentifyPlugin: {

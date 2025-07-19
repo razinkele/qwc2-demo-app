@@ -1,0 +1,548 @@
+Attached HTML and CSS Context
+
+<button class="map-button " title="appmenu.items.BowtieAnalysis"><span class="icon icon-butterfly"></span></button>
+
+
+/* Matched Rule from user-agent */
+button {
+  appearance: auto;
+}
+
+/* Matched Rule from user-agent */
+input, textarea, select, button {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0em;
+  margin-left: 0em;
+  text-rendering: auto;
+  color: fieldtext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+}
+
+/* Matched Rule from user-agent */
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+  text-align: center;
+  cursor: default;
+  padding-block-start: 1px;
+  padding-block-end: 1px;
+  padding-inline-start: 6px;
+  padding-inline-end: 6px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-top-style: outset;
+  border-right-style: outset;
+  border-bottom-style: outset;
+  border-left-style: outset;
+  border-top-color: buttonborder;
+  border-right-color: buttonborder;
+  border-bottom-color: buttonborder;
+  border-left-color: buttonborder;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  box-sizing: border-box;
+  background-color: buttonface;
+  color: buttontext;
+}
+
+/* Matched Rule from regular */
+* {
+  cursor: inherit;
+  box-sizing: border-box;
+  cursor: inherit;
+  box-sizing: border-box;
+}
+
+/* Matched Rule from regular */
+input, select, button, textarea {
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+/* Matched Rule from regular */
+button.map-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--map-button-bg-color);
+  width: 3em;
+  height: 3em;
+  border-radius: 1.5em;
+  color: var(--map-button-text-color);
+  border: none;
+  box-shadow: 0px 5px 10px rgba(136, 136, 136, 0.5);
+  transition: background-color 0.25s, color 0.25s;
+  cursor: pointer;
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--map-button-bg-color);
+  width: 3em;
+  height: 3em;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  color: var(--map-button-text-color);
+  border-top-width: initial;
+  border-right-width: initial;
+  border-bottom-width: initial;
+  border-left-width: initial;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-color: initial;
+  border-right-color: initial;
+  border-bottom-color: initial;
+  border-left-color: initial;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  box-shadow: rgba(136, 136, 136, 0.5) 0px 5px 10px;
+  transition-behavior: normal, normal;
+  transition-duration: 0.25s, 0.25s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+  transition-property: background-color, color;
+  cursor: pointer;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+/* Inherited from ancestor level 1 (user-agent) */
+div {
+  display: block;
+}
+
+/* Inherited from ancestor level 1 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 1 (regular) */
+* {
+  cursor: inherit;
+  box-sizing: border-box;
+  cursor: inherit;
+  box-sizing: border-box;
+}
+
+/* Inherited from ancestor level 1 (regular) */
+div.map-button-container {
+  position: relative;
+  pointer-events: initial;
+  position: relative;
+  pointer-events: initial;
+}
+
+/* Inherited from ancestor level 2 (user-agent) */
+div {
+  display: block;
+}
+
+/* Inherited from ancestor level 2 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 2 (regular) */
+* {
+  cursor: inherit;
+  box-sizing: border-box;
+  cursor: inherit;
+  box-sizing: border-box;
+}
+
+/* Inherited from ancestor level 2 (regular) */
+div.map-buttons-container {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap-reverse;
+  z-index: 2;
+  overflow: hidden;
+  padding: 0 1em 2.5em 1em;
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap-reverse;
+  z-index: 2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 0px;
+  padding-right: 1em;
+  padding-bottom: 2.5em;
+  padding-left: 1em;
+}
+
+/* Inherited from ancestor level 3 (user-agent) */
+div {
+  display: block;
+}
+
+/* Inherited from ancestor level 3 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 3 (regular) */
+* {
+  cursor: inherit;
+  box-sizing: border-box;
+  cursor: inherit;
+  box-sizing: border-box;
+}
+
+/* Inherited from ancestor level 3 (regular) */
+div.PluginsContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+/* Inherited from ancestor level 4 (user-agent) */
+div {
+  display: block;
+}
+
+/* Inherited from ancestor level 4 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 4 (regular) */
+* {
+  cursor: inherit;
+  box-sizing: border-box;
+  cursor: inherit;
+  box-sizing: border-box;
+}
+
+/* Inherited from ancestor level 4 (regular) */
+html, body, #container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Inherited from ancestor level 5 (user-agent) */
+body {
+  display: block;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+/* Inherited from ancestor level 5 (regular) */
+* {
+  cursor: inherit;
+  box-sizing: border-box;
+  cursor: inherit;
+  box-sizing: border-box;
+}
+
+/* Inherited from ancestor level 5 (regular) */
+html, body {
+  overflow: hidden;
+  cursor: default;
+  color: var(--text-color);
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  cursor: default;
+  color: var(--text-color);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+/* Inherited from ancestor level 5 (regular) */
+html, body, #container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Inherited from ancestor level 6 (user-agent) */
+html {
+  display: block;
+}
+
+/* Inherited from ancestor level 6 (user-agent) */
+:root {
+  view-transition-name: root;
+}
+
+/* Inherited from ancestor level 6 (regular) */
+* {
+  cursor: inherit;
+  box-sizing: border-box;
+  cursor: inherit;
+  box-sizing: border-box;
+}
+
+/* Inherited from ancestor level 6 (regular) */
+html, body {
+  overflow: hidden;
+  cursor: default;
+  color: var(--text-color);
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  cursor: default;
+  color: var(--text-color);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+/* Inherited from ancestor level 6 (regular) */
+html, body, #container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Inherited from ancestor level 6 (regular) */
+:root {
+  --titlebar-bg-color: #1a237e !important;
+  --app-menu-bg-color: #1b5e20 !important;
+  --app-submenu-bg-color: #1b5e20 !important;
+  --panel-bg-color: rgba(27, 94, 32, 0.85) !important;
+  --app-menu-text-color: white !important;
+  --app-submenu-text-color: white !important;
+  --text-color: white !important;
+  --titlebar-bg-color: #1a237e !important;
+  --app-menu-bg-color: #1b5e20 !important;
+  --app-submenu-bg-color: #1b5e20 !important;
+  --panel-bg-color: rgba(27, 94, 32, 0.85) !important;
+  --app-menu-text-color: white !important;
+  --app-submenu-text-color: white !important;
+  --text-color: white !important;
+}
+
+/* Inherited from ancestor level 6 (regular) */
+:root, :host {
+  --ol-background-color: white;
+  --ol-accent-background-color: #F5F5F5;
+  --ol-subtle-background-color: rgba(128, 128, 128, 0.25);
+  --ol-partial-background-color: rgba(255, 255, 255, 0.75);
+  --ol-foreground-color: #333333;
+  --ol-subtle-foreground-color: #666666;
+  --ol-brand-color: #00AAFF;
+  --ol-background-color: white;
+  --ol-accent-background-color: #F5F5F5;
+  --ol-subtle-background-color: rgba(128, 128, 128, 0.25);
+  --ol-partial-background-color: rgba(255, 255, 255, 0.75);
+  --ol-foreground-color: #333333;
+  --ol-subtle-foreground-color: #666666;
+  --ol-brand-color: #00AAFF;
+}
+
+/* Inherited from ancestor level 6 (regular) */
+:root.default {
+  --titlebar-bg-color: #1a237e !important;
+  --app-menu-bg-color: #1b5e20 !important;
+  --app-submenu-bg-color: #1b5e20 !important;
+  --panel-bg-color: rgba(27, 94, 32, 0.85) !important;
+  --app-menu-text-color: white !important;
+  --app-submenu-text-color: white !important;
+  --titlebar-bg-color: #1a237e !important;
+  --app-menu-bg-color: #1b5e20 !important;
+  --app-submenu-bg-color: #1b5e20 !important;
+  --panel-bg-color: rgba(27, 94, 32, 0.85) !important;
+  --app-menu-text-color: white !important;
+  --app-submenu-text-color: white !important;
+}
+
+/* Inherited from ancestor level 6 (regular) */
+:root, :root.default {
+  --text-color: #595959;
+  --text-color-link: #337ab7;
+  --text-color-disabled: #999;
+  --container-bg-color: #f8f8f8;
+  --input-bg-color: white;
+  --input-bg-color-disabled: #eee;
+  --border-color: #bbb;
+  --color-active: #078aa3;
+  --focus-outline: 2px solid #3584e4;
+  --tooltip-bg-color: rgba(0, 0, 0, 0.75);
+  --tooltip-text-color: white;
+  --tooltip-border-color: black;
+  --map-button-bg-color: #595959;
+  --map-button-text-color: white;
+  --map-button-hover-bg-color: #f2f2f2;
+  --map-button-hover-text-color: #595959;
+  --map-button-active-bg-color: #f2f2f2;
+  --map-button-active-text-color: #595959;
+  --panel-bg-color: rgba(255, 255, 255, 0.75);
+  --panel-text-color: #595959;
+  --titlebar-bg-color: #595959;
+  --titlebar-text-color: white;
+  --button-bg-color: #e9e9e9;
+  --button-bg-color-hover: #dcdcdc;
+  --button-bg-color-active: #078aa3;
+  --button-bg-color-active-hover: #06798d;
+  --button-bg-color-disabled: #e9e9e9;
+  --button-text-color: #595959;
+  --button-text-color-hover: #595959;
+  --button-text-color-active: white;
+  --button-text-color-active-hover: white;
+  --button-text-color-disabled: #bbb;
+  --list-bg-color: white;
+  --list-section-bg-color: #ccc;
+  --list-section-text-color: #595959;
+  --list-item-bg-color-even: #f0f0f0;
+  --list-item-bg-color-hover: #dcdcdc;
+  --list-item-bg-color-active: #078aa3;
+  --list-item-bg-color-active-hover: #06798d;
+  --list-item-text-color-hover: #595959;
+  --list-item-text-color-active: white;
+  --list-item-text-color-active-hover: white;
+  --app-menu-bg-color: #f2f2f2;
+  --app-menu-text-color: #595959;
+  --app-menu-bg-color-hover: white;
+  --app-menu-text-color-hover: #595959;
+  --app-submenu-bg-color: #808080;
+  --app-submenu-text-color: white;
+  --app-submenu-bg-color-hover: #a0a0a0;
+  --app-submenu-text-color-hover: white;
+  --text-color: #595959;
+  --text-color-link: #337ab7;
+  --text-color-disabled: #999;
+  --container-bg-color: #f8f8f8;
+  --input-bg-color: white;
+  --input-bg-color-disabled: #eee;
+  --border-color: #bbb;
+  --color-active: #078aa3;
+  --focus-outline: 2px solid #3584e4;
+  --tooltip-bg-color: rgba(0, 0, 0, 0.75);
+  --tooltip-text-color: white;
+  --tooltip-border-color: black;
+  --map-button-bg-color: #595959;
+  --map-button-text-color: white;
+  --map-button-hover-bg-color: #f2f2f2;
+  --map-button-hover-text-color: #595959;
+  --map-button-active-bg-color: #f2f2f2;
+  --map-button-active-text-color: #595959;
+  --panel-bg-color: rgba(255, 255, 255, 0.75);
+  --panel-text-color: #595959;
+  --titlebar-bg-color: #595959;
+  --titlebar-text-color: white;
+  --button-bg-color: #e9e9e9;
+  --button-bg-color-hover: #dcdcdc;
+  --button-bg-color-active: #078aa3;
+  --button-bg-color-active-hover: #06798d;
+  --button-bg-color-disabled: #e9e9e9;
+  --button-text-color: #595959;
+  --button-text-color-hover: #595959;
+  --button-text-color-active: white;
+  --button-text-color-active-hover: white;
+  --button-text-color-disabled: #bbb;
+  --list-bg-color: white;
+  --list-section-bg-color: #ccc;
+  --list-section-text-color: #595959;
+  --list-item-bg-color-even: #f0f0f0;
+  --list-item-bg-color-hover: #dcdcdc;
+  --list-item-bg-color-active: #078aa3;
+  --list-item-bg-color-active-hover: #06798d;
+  --list-item-text-color-hover: #595959;
+  --list-item-text-color-active: white;
+  --list-item-text-color-active-hover: white;
+  --app-menu-bg-color: #f2f2f2;
+  --app-menu-text-color: #595959;
+  --app-menu-bg-color-hover: white;
+  --app-menu-text-color-hover: #595959;
+  --app-submenu-bg-color: #808080;
+  --app-submenu-text-color: white;
+  --app-submenu-bg-color-hover: #a0a0a0;
+  --app-submenu-text-color-hover: white;
+}

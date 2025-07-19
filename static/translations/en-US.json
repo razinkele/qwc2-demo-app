@@ -4,6 +4,9 @@
     "appmenu": {
       "items": {
         "ExternalLink": "",
+        "DataPortal": "Marine Data Portal",
+        "BowtieAnalysis": "Bowtie Risk Analysis",
+        "CustomDashboard": "Marine Dashboard",
         "Bookmark": "Bookmarks",
         "Compare3D": "Compare",
         "Editing": "Editing",

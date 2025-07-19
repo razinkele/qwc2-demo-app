@@ -7,10 +7,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import TaskBar from 'qwc2/components/TaskBar';
+import {setCurrentTask} from 'qwc2/actions/task';
 
 class CustomDashboard extends React.Component {
     static propTypes = {
-        active: PropTypes.bool
+        active: PropTypes.bool,
+        setCurrentTask: PropTypes.func
     };
 
     constructor(props) {
@@ -94,7 +96,7 @@ class CustomDashboard extends React.Component {
         }
 
         return (
-            <TaskBar onHide={this.quit} task="CustomDashboard" title="Research Dashboard">
+            <TaskBar onHide={this.quit} task="CustomDashboardPlugin" title="Research Dashboard">
                 <div role="body" style={{
                     padding: '20px',
                     maxHeight: '85vh',
@@ -393,10 +395,8 @@ class CustomDashboard extends React.Component {
     };
 }
 
-const CustomDashboardPlugin = connect(state => ({
-    active: state.task.id === "CustomDashboard"
+export default (cfg) => connect(state => ({
+    active: state.task.id === "CustomDashboardPlugin"
 }), {
-    setCurrentTask: (task) => ({type: 'SET_CURRENT_TASK', task})
+    setCurrentTask: setCurrentTask
 })(CustomDashboard);
-
-export default CustomDashboardPlugin;

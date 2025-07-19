@@ -7,14 +7,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import TaskBar from 'qwc2/components/TaskBar';
+import {setCurrentTask} from 'qwc2/actions/task';
 
 class DataPortal extends React.Component {
     static propTypes = {
-        active: PropTypes.bool
+        active: PropTypes.bool,
+        setCurrentTask: PropTypes.func,
+        task: PropTypes.object
     };
 
     constructor(props) {
         super(props);
+        console.log('DataPortalPlugin constructor called - plugin is loading!');
         this.state = {
             loading: false,
             selectedDataset: null,
@@ -33,12 +37,15 @@ class DataPortal extends React.Component {
     }
 
     render() {
+        // Debug logging to verify props
+        console.log('DataPortal render - active:', this.props.active, 'task.id:', this.props.task?.id);
+        
         if (!this.props.active) {
             return null;
         }
 
         return (
-            <TaskBar onHide={this.quit} task="DataPortal" title="Data Portal">
+            <TaskBar onHide={this.quit} task="DataPortalPlugin" title="Data Portal">
                 <div role="body" style={{
                     padding: '20px',
                     maxHeight: '70vh',
@@ -265,14 +272,18 @@ class DataPortal extends React.Component {
     };
 }
 
-const DataPortalPlugin = connect(state => ({
-    active: state.task.id === "DataPortal"
-}), {
-    setCurrentTask: (task) => ({type: 'SET_CURRENT_TASK', task})
-})(DataPortal);
-
-export default function() {
+export default (cfg) => connect(state => {
+    console.log('DataPortalPlugin connect mapStateToProps:', {
+        currentTaskId: state.task?.id,
+        isDataPortalPlugin: state.task?.id === "DataPortalPlugin",
+        fullTaskState: state.task,
+        allState: state
+    });
+    
     return {
-        DataPortalPlugin: DataPortalPlugin
+        active: state.task.id === "DataPortalPlugin",
+        task: state.task
     };
-}
+}, {
+    setCurrentTask: setCurrentTask
+})(DataPortal);
