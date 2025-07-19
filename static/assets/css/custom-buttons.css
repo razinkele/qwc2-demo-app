@@ -790,6 +790,58 @@ html body .dialog .content * {
 .topbar button[title*="Test"],
 .topbar .icon-ok,
 /* TaskButton styling for custom plugins */
+.TaskButton {
+    background-color: #FFD700 !important;
+    color: #000 !important;
+    border: 2px solid #FFA500 !important;
+    font-weight: bold !important;
+}
+
+.TaskButton:hover {
+    background-color: #FFA500 !important;
+    color: #000 !important;
+}
+
+/* TaskBar styling */
+.task-bar {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    min-width: 400px;
+    max-width: 80vw;
+}
+
+.task-bar .task-bar-title {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin: 0;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+}
+
+.task-bar .task-bar-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.task-bar .task-bar-close:hover {
+    background: rgba(255,255,255,0.2);
+}
 .data-portal-button,
 .bowtie-analysis-button,
 .custom-dashboard-button,

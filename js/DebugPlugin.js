@@ -31,13 +31,37 @@ class DebugTest extends React.Component {
         alert('DebugPlugin is ACTIVE and rendering!');
 
         return (
-            <TaskBar onHide={this.quit} task="DebugPlugin" title="Debug Test">
+            <TaskBar onHide={this.quit} task="Debug" title="Debug Test">
                 <div role="body" style={{ 
                     padding: '20px', 
                     backgroundColor: '#ff0000', 
                     color: 'white',
-                    fontSize: '18px'
+                    fontSize: '18px',
+                    position: 'relative'
                 }}>
+                    {/* Custom close button in top-right corner */}
+                    <button 
+                        onClick={this.quit}
+                        style={{
+                            position: 'absolute',
+                            top: '10px',
+                            right: '10px',
+                            background: '#ff4444',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '50%',
+                            width: '30px',
+                            height: '30px',
+                            cursor: 'pointer',
+                            fontSize: '16px',
+                            fontWeight: 'bold',
+                            zIndex: 1000
+                        }}
+                        title="Close Plugin"
+                    >
+                        ×
+                    </button>
+                    
                     <h2>DEBUG PLUGIN WORKING!</h2>
                     <p>Task ID: {this.props.task?.id}</p>
                     <p>Active: {String(this.props.active)}</p>
@@ -70,7 +94,7 @@ export default (cfg) => connect(state => {
     });
     
     return {
-        active: state.task.id === "DebugPlugin",
+        active: state.task.id === "Debug",
         task: state.task
     };
 }, {

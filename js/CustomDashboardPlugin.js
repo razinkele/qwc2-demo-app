@@ -96,15 +96,39 @@ class CustomDashboard extends React.Component {
         }
 
         return (
-            <TaskBar onHide={this.quit} task="CustomDashboardPlugin" title="Research Dashboard">
+            <TaskBar onHide={this.quit} task="CustomDashboard" title="Research Dashboard">
                 <div role="body" style={{
                     padding: '20px',
                     maxHeight: '85vh',
                     overflowY: 'auto',
                     fontFamily: 'Arial, sans-serif',
                     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    borderRadius: '12px'
+                    borderRadius: '12px',
+                    position: 'relative'
                 }}>
+                    {/* Custom close button in top-right corner */}
+                    <button 
+                        onClick={this.quit}
+                        style={{
+                            position: 'absolute',
+                            top: '10px',
+                            right: '10px',
+                            background: '#ff4444',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '50%',
+                            width: '30px',
+                            height: '30px',
+                            cursor: 'pointer',
+                            fontSize: '16px',
+                            fontWeight: 'bold',
+                            zIndex: 1000
+                        }}
+                        title="Close Plugin"
+                    >
+                        ×
+                    </button>
+                    
                     {/* Header */}
                     <div style={{
                         display: 'flex',
@@ -357,6 +381,25 @@ class CustomDashboard extends React.Component {
                             ))}
                         </div>
                     </div>
+                    
+                    {/* Additional close button at bottom */}
+                    <div style={{ marginTop: '20px', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '15px' }}>
+                        <button 
+                            onClick={this.quit}
+                            style={{
+                                background: '#4CAF50',
+                                color: 'white',
+                                border: 'none',
+                                padding: '10px 20px',
+                                borderRadius: '5px',
+                                cursor: 'pointer',
+                                fontSize: '14px',
+                                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                            }}
+                        >
+                            Close Plugin
+                        </button>
+                    </div>
                 </div>
             </TaskBar>
         );
@@ -396,7 +439,7 @@ class CustomDashboard extends React.Component {
 }
 
 export default (cfg) => connect(state => ({
-    active: state.task.id === "CustomDashboardPlugin"
+    active: state.task.id === "CustomDashboard"
 }), {
     setCurrentTask: setCurrentTask
 })(CustomDashboard);

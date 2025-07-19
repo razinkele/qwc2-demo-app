@@ -61,11 +61,11 @@ document.addEventListener('click', function(event) {
         });
         
         // Check if this is a plugin button based on actual button titles
-        const isPluginButton = button.title?.includes('DataPortalPlugin') || 
-                              button.title?.includes('BowtieAnalysisPlugin') || 
-                              button.title?.includes('CustomDashboardPlugin') || 
-                              button.title?.includes('TestPlugin') ||
-                              button.title?.includes('DebugPlugin');
+        const isPluginButton = button.title?.includes('DataPortal') || 
+                              button.title?.includes('BowtieAnalysis') || 
+                              button.title?.includes('CustomDashboard') || 
+                              button.title?.includes('Test') ||
+                              button.title?.includes('Debug');
         
         if (isPluginButton) {
             console.log('=== PLUGIN BUTTON CLICKED ===');
@@ -79,16 +79,16 @@ document.addEventListener('click', function(event) {
                     console.log('=== ATTEMPTING MANUAL TASK ACTIVATION ===');
                     
                     let taskId = null;
-                    if (button.title?.includes('DataPortalPlugin')) {
-                        taskId = 'DataPortalPlugin';
-                    } else if (button.title?.includes('BowtieAnalysisPlugin')) {
-                        taskId = 'BowtieAnalysisPlugin';
-                    } else if (button.title?.includes('CustomDashboardPlugin')) {
-                        taskId = 'CustomDashboardPlugin';
-                    } else if (button.title?.includes('TestPlugin')) {
-                        taskId = 'TestPlugin';
-                    } else if (button.title?.includes('DebugPlugin')) {
-                        taskId = 'DebugPlugin';
+                    if (button.title?.includes('DataPortal')) {
+                        taskId = 'DataPortal';
+                    } else if (button.title?.includes('BowtieAnalysis')) {
+                        taskId = 'BowtieAnalysis';
+                    } else if (button.title?.includes('CustomDashboard')) {
+                        taskId = 'CustomDashboard';
+                    } else if (button.title?.includes('Test')) {
+                        taskId = 'Test';
+                    } else if (button.title?.includes('Debug')) {
+                        taskId = 'Debug';
                     }
                     
                     if (taskId) {

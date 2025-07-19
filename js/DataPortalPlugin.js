@@ -45,13 +45,37 @@ class DataPortal extends React.Component {
         }
 
         return (
-            <TaskBar onHide={this.quit} task="DataPortalPlugin" title="Data Portal">
+            <TaskBar onHide={this.quit} task="DataPortal" title="Data Portal">
                 <div role="body" style={{
                     padding: '20px',
                     maxHeight: '70vh',
                     overflowY: 'auto',
-                    fontFamily: 'Arial, sans-serif'
+                    fontFamily: 'Arial, sans-serif',
+                    position: 'relative'
                 }}>
+                    {/* Custom close button in top-right corner */}
+                    <button 
+                        onClick={this.quit}
+                        style={{
+                            position: 'absolute',
+                            top: '10px',
+                            right: '10px',
+                            background: '#ff4444',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '50%',
+                            width: '30px',
+                            height: '30px',
+                            cursor: 'pointer',
+                            fontSize: '16px',
+                            fontWeight: 'bold',
+                            zIndex: 1000
+                        }}
+                        title="Close Plugin"
+                    >
+                        ×
+                    </button>
+                    
                     {/* Header */}
                     <div style={{
                         marginBottom: '20px',
@@ -275,13 +299,13 @@ class DataPortal extends React.Component {
 export default (cfg) => connect(state => {
     console.log('DataPortalPlugin connect mapStateToProps:', {
         currentTaskId: state.task?.id,
-        isDataPortalPlugin: state.task?.id === "DataPortalPlugin",
+        isDataPortalPlugin: state.task?.id === "DataPortal",
         fullTaskState: state.task,
         allState: state
     });
     
     return {
-        active: state.task.id === "DataPortalPlugin",
+        active: state.task.id === "DataPortal",
         task: state.task
     };
 }, {

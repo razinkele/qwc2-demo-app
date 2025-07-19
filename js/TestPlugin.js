@@ -29,11 +29,54 @@ class TestPlugin extends React.Component {
         }
 
         return (
-            <TaskBar onHide={this.quit} task="TestPlugin" title="Test Plugin">
-                <div role="body" style={{ padding: '20px' }}>
+            <TaskBar onHide={this.quit} task="Test" title="Test Plugin">
+                <div role="body" style={{ padding: '20px', position: 'relative' }}>
+                    {/* Custom close button in top-right corner */}
+                    <button 
+                        onClick={this.quit}
+                        style={{
+                            position: 'absolute',
+                            top: '10px',
+                            right: '10px',
+                            background: '#ff4444',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '50%',
+                            width: '30px',
+                            height: '30px',
+                            cursor: 'pointer',
+                            fontSize: '16px',
+                            fontWeight: 'bold',
+                            zIndex: 1000
+                        }}
+                        title="Close Plugin"
+                    >
+                        ×
+                    </button>
+                    
                     <h2>Test Plugin Works!</h2>
                     <p>This plugin is successfully activated.</p>
-                    <button onClick={this.quit}>Close</button>
+                    <p style={{ color: '#666', fontSize: '12px' }}>
+                        Task ID: {this.props.task?.id} | Active: {this.props.active ? 'Yes' : 'No'}
+                    </p>
+                    
+                    {/* Additional close button at bottom */}
+                    <div style={{ marginTop: '20px', textAlign: 'center' }}>
+                        <button 
+                            onClick={this.quit}
+                            style={{
+                                background: '#4CAF50',
+                                color: 'white',
+                                border: 'none',
+                                padding: '10px 20px',
+                                borderRadius: '5px',
+                                cursor: 'pointer',
+                                fontSize: '14px'
+                            }}
+                        >
+                            Close Plugin
+                        </button>
+                    </div>
                 </div>
             </TaskBar>
         );
@@ -45,7 +88,7 @@ class TestPlugin extends React.Component {
 }
 
 export default (cfg) => connect(state => ({
-    active: state.task.id === "TestPlugin"
+    active: state.task.id === "Test"
 }), {
     setCurrentTask: setCurrentTask
 })(TestPlugin);

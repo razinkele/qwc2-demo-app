@@ -50,13 +50,37 @@ class BowtieAnalysis extends React.Component {
         }
 
         return (
-            <TaskBar onHide={this.quit} task="BowtieAnalysisPlugin" title="Bowtie Risk Analysis">
+            <TaskBar onHide={this.quit} task="BowtieAnalysis" title="Bowtie Risk Analysis">
                 <div role="body" style={{
                     padding: '20px',
                     maxHeight: '80vh',
                     overflowY: 'auto',
-                    fontFamily: 'Arial, sans-serif'
+                    fontFamily: 'Arial, sans-serif',
+                    position: 'relative'
                 }}>
+                    {/* Custom close button in top-right corner */}
+                    <button 
+                        onClick={this.quit}
+                        style={{
+                            position: 'absolute',
+                            top: '10px',
+                            right: '10px',
+                            background: '#ff4444',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '50%',
+                            width: '30px',
+                            height: '30px',
+                            cursor: 'pointer',
+                            fontSize: '16px',
+                            fontWeight: 'bold',
+                            zIndex: 1000
+                        }}
+                        title="Close Plugin"
+                    >
+                        ×
+                    </button>
+                    
                     {/* Header */}
                     <div style={{
                         marginBottom: '20px',
@@ -102,6 +126,24 @@ class BowtieAnalysis extends React.Component {
 
                     {/* Tab Content */}
                     {this.renderTabContent()}
+                    
+                    {/* Additional close button at bottom */}
+                    <div style={{ marginTop: '20px', textAlign: 'center', borderTop: '1px solid #ddd', paddingTop: '15px' }}>
+                        <button 
+                            onClick={this.quit}
+                            style={{
+                                background: '#4CAF50',
+                                color: 'white',
+                                border: 'none',
+                                padding: '10px 20px',
+                                borderRadius: '5px',
+                                cursor: 'pointer',
+                                fontSize: '14px'
+                            }}
+                        >
+                            Close Plugin
+                        </button>
+                    </div>
                 </div>
             </TaskBar>
         );
@@ -441,7 +483,7 @@ export default (cfg) => connect(state => {
     });
     
     return {
-        active: state.task.id === "BowtieAnalysisPlugin"
+        active: state.task.id === "BowtieAnalysis"
     };
 }, {
     setCurrentTask: setCurrentTask
