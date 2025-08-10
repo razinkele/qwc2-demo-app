@@ -173,6 +173,8 @@
           },
 			    {
 		        "title":"Lithuanian coastal zone",
+		        "queryable": true,
+				"infoFormat": "text/html",
                 "url":"http://laguna.ku.lt/qgisserver?MAP=/srv/qgis/projects/Lithuanian.qgs",
                 "description": "<Lithuanian BBT>",
                 "attribution":"Broad Band Transects",
@@ -199,20 +201,16 @@
                 ],
                 "backgroundLayers":[
                     {
-                        "name":"opentopomap"
-                    },
-                    {
                       "name": "bathymetry",
                       "visibility": true
                     }
                 ],
                 "searchProviders":[
                     "coordinates",
-                    "uster",
                     {
                         "key": "nominatim",
                         "params": {
-                            "countrycodes": "ch"
+                            "countrycodes": "us"
                         }
                     }
                 ],

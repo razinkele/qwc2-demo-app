@@ -1,0 +1,440 @@
+/*!
+ * MARBEFES BBT Database - Color Scheme System
+ * Direct QWC2 Component Override Styles
+ * Version: 1.0.0
+ * License: MIT
+ */
+
+/* =====================================================
+   OCEAN BLUE THEME (Default)
+   Professional marine research theme
+===================================================== */
+body.colorscheme-default,
+body:not([class*="colorscheme"]) {
+    --primary-color: #2196f3;
+    --secondary-color: #009688;
+    --accent-color: #ff7043;
+    --background-color: #ffffff;
+    --surface-color: #fafafa;
+    --text-color: #212121;
+    --text-secondary: #757575;
+    --border-color: #e0e0e0;
+}
+
+/* Override QWC2 Default Styles - Ocean Blue */
+body.colorscheme-default .TopBar,
+body.colorscheme-default .topbar,
+body:not([class*="colorscheme"]) .TopBar,
+body:not([class*="colorscheme"]) .topbar {
+    background-color: #2196f3 !important;
+    background: linear-gradient(135deg, #2196f3, #1976d2) !important;
+    color: white !important;
+    border-bottom: 2px solid #1565c0 !important;
+}
+
+body.colorscheme-default .TopBar button,
+body.colorscheme-default .topbar button,
+body:not([class*="colorscheme"]) .TopBar button,
+body:not([class*="colorscheme"]) .topbar button {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 4px !important;
+}
+
+body.colorscheme-default .TopBar button:hover,
+body.colorscheme-default .topbar button:hover,
+body:not([class*="colorscheme"]) .TopBar button:hover,
+body:not([class*="colorscheme"]) .topbar button:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-1px) !important;
+}
+
+body.colorscheme-default .SideBar,
+body.colorscheme-default .sidebar,
+body:not([class*="colorscheme"]) .SideBar,
+body:not([class*="colorscheme"]) .sidebar {
+    background-color: #fafafa !important;
+    border-right: 2px solid #e0e0e0 !important;
+    color: #212121 !important;
+}
+
+body.colorscheme-default .BottomBar,
+body.colorscheme-default .bottombar,
+body:not([class*="colorscheme"]) .BottomBar,
+body:not([class*="colorscheme"]) .bottombar {
+    background-color: #f5f5f5 !important;
+    color: #757575 !important;
+    border-top: 1px solid #e0e0e0 !important;
+}
+
+/* =====================================================
+   DEEP SEA THEME (Dark Mode)
+   Professional dark theme for extended use
+===================================================== */
+body.colorscheme-dark {
+    --primary-color: #5dade2;
+    --secondary-color: #5f7481;
+    --accent-color: #ff6b35;
+    --background-color: #0f1419;
+    --surface-color: #1e2328;
+    --text-color: #e3f2fd;
+    --text-secondary: #b0bec5;
+    --border-color: #374248;
+    background-color: #0f1419 !important;
+    color: #e3f2fd !important;
+}
+
+/* Override QWC2 Styles - Deep Sea */
+body.colorscheme-dark .TopBar,
+body.colorscheme-dark .topbar {
+    background: linear-gradient(135deg, #1e2328, #2d3748) !important;
+    color: #e3f2fd !important;
+    border-bottom: 2px solid #374248 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.colorscheme-dark .TopBar button,
+body.colorscheme-dark .topbar button {
+    background-color: rgba(93, 173, 226, 0.15) !important;
+    color: #e3f2fd !important;
+    border: 1px solid rgba(93, 173, 226, 0.3) !important;
+    border-radius: 4px !important;
+}
+
+body.colorscheme-dark .TopBar button:hover,
+body.colorscheme-dark .topbar button:hover {
+    background-color: rgba(93, 173, 226, 0.25) !important;
+    border-color: rgba(93, 173, 226, 0.5) !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+}
+
+body.colorscheme-dark .SideBar,
+body.colorscheme-dark .sidebar {
+    background-color: #2d3748 !important;
+    border-right: 2px solid #374248 !important;
+    color: #e3f2fd !important;
+}
+
+body.colorscheme-dark .BottomBar,
+body.colorscheme-dark .bottombar {
+    background-color: #1e2328 !important;
+    color: #b0bec5 !important;
+    border-top: 1px solid #374248 !important;
+}
+
+body.colorscheme-dark .panel,
+body.colorscheme-dark .dialog,
+body.colorscheme-dark .window {
+    background-color: #2d3748 !important;
+    color: #e3f2fd !important;
+    border: 1px solid #374248 !important;
+}
+
+body.colorscheme-dark input,
+body.colorscheme-dark select,
+body.colorscheme-dark textarea {
+    background-color: #1e2328 !important;
+    color: #e3f2fd !important;
+    border: 1px solid #374248 !important;
+}
+
+/* =====================================================
+   CORAL REEF THEME (High Contrast)
+   Accessible theme with warm marine colors
+===================================================== */
+body.colorscheme-highcontrast {
+    --primary-color: #ff9800;
+    --secondary-color: #00bcd4;
+    --accent-color: #e91e63;
+    --background-color: #ffffff;
+    --surface-color: #f8f9fa;
+    --text-color: #000000;
+    --text-secondary: #424242;
+    --border-color: #424242;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Override QWC2 Styles - Coral Reef */
+body.colorscheme-highcontrast .TopBar,
+body.colorscheme-highcontrast .topbar {
+    background: linear-gradient(135deg, #ff9800, #f57c00) !important;
+    color: white !important;
+    border-bottom: 3px solid #ef6c00 !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+}
+
+body.colorscheme-highcontrast .TopBar button,
+body.colorscheme-highcontrast .topbar button {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+}
+
+body.colorscheme-highcontrast .TopBar button:hover,
+body.colorscheme-highcontrast .topbar button:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.colorscheme-highcontrast .SideBar,
+body.colorscheme-highcontrast .sidebar {
+    background-color: #f8f9fa !important;
+    border-right: 3px solid #424242 !important;
+    color: #000000 !important;
+}
+
+body.colorscheme-highcontrast .BottomBar,
+body.colorscheme-highcontrast .bottombar {
+    background-color: #e9ecef !important;
+    color: #424242 !important;
+    border-top: 2px solid #424242 !important;
+}
+
+/* =====================================================
+   ARCTIC THEME (Minimal)
+   Clean, ice-inspired minimalist theme
+===================================================== */
+body.colorscheme-arctic {
+    --primary-color: #8bc34a;
+    --secondary-color: #9c27b0;
+    --accent-color: #ff5722;
+    --background-color: #fefefe;
+    --surface-color: #f8f9fa;
+    --text-color: #263238;
+    --text-secondary: #546e7a;
+    --border-color: #eceff1;
+    background-color: #fefefe !important;
+    color: #263238 !important;
+}
+
+/* Override QWC2 Styles - Arctic */
+body.colorscheme-arctic .TopBar,
+body.colorscheme-arctic .topbar {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff) !important;
+    color: #263238 !important;
+    border-bottom: 1px solid #eceff1 !important;
+    box-shadow: 0 1px 4px rgba(38, 50, 56, 0.1) !important;
+}
+
+body.colorscheme-arctic .TopBar button,
+body.colorscheme-arctic .topbar button {
+    background-color: rgba(139, 195, 74, 0.1) !important;
+    color: #263238 !important;
+    border: 1px solid rgba(139, 195, 74, 0.3) !important;
+    border-radius: 4px !important;
+}
+
+body.colorscheme-arctic .TopBar button:hover,
+body.colorscheme-arctic .topbar button:hover {
+    background-color: rgba(139, 195, 74, 0.2) !important;
+    border-color: rgba(139, 195, 74, 0.5) !important;
+    transform: translateY(-1px) !important;
+}
+
+body.colorscheme-arctic .SideBar,
+body.colorscheme-arctic .sidebar {
+    background-color: #f8f9fa !important;
+    border-right: 1px solid #eceff1 !important;
+    color: #263238 !important;
+}
+
+body.colorscheme-arctic .BottomBar,
+body.colorscheme-arctic .bottombar {
+    background-color: #f1f3f4 !important;
+    color: #546e7a !important;
+    border-top: 1px solid #eceff1 !important;
+}
+
+/* =====================================================
+   UNIVERSAL QWC2 COMPONENT OVERRIDES
+   Apply to all themes with higher specificity
+===================================================== */
+
+/* Buttons - All Themes */
+body[class*="colorscheme"] button:not(.data-portal-button):not(.bowtie-analysis-button):not(.custom-dashboard-button):not(.test-plugin-button) {
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+    padding: 8px 16px !important;
+}
+
+/* Panels and Dialogs */
+body[class*="colorscheme"] .panel,
+body[class*="colorscheme"] .dialog,
+body[class*="colorscheme"] .window {
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    padding: 16px !important;
+}
+
+/* Search Box */
+body[class*="colorscheme"] .searchbox,
+body[class*="colorscheme"] .search-field {
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
+    border: 2px solid transparent !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Map Controls */
+body[class*="colorscheme"] .ol-control,
+body[class*="colorscheme"] .map-control {
+    border-radius: 6px !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* MARBEFES Custom Buttons - Enhanced Positioning */
+.data-portal-button,
+.bowtie-analysis-button,
+.custom-dashboard-button,
+.test-plugin-button {
+    position: fixed !important;
+    left: 10px !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 8px !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.data-portal-button {
+    top: 100px !important;
+    background: linear-gradient(135deg, #2196f3, #1976d2) !important;
+    color: white !important;
+}
+
+.bowtie-analysis-button {
+    top: 160px !important;
+    background: linear-gradient(135deg, #009688, #00796b) !important;
+    color: white !important;
+}
+
+.custom-dashboard-button {
+    top: 220px !important;
+    background: linear-gradient(135deg, #ff9800, #f57c00) !important;
+    color: white !important;
+}
+
+.test-plugin-button {
+    top: 280px !important;
+    background: linear-gradient(135deg, #4caf50, #388e3c) !important;
+    color: white !important;
+}
+
+.data-portal-button:hover,
+.bowtie-analysis-button:hover,
+.custom-dashboard-button:hover,
+.test-plugin-button:hover {
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Theme-specific button colors */
+body.colorscheme-dark .data-portal-button {
+    background: linear-gradient(135deg, #5dade2, #2f5f8f) !important;
+}
+
+body.colorscheme-dark .bowtie-analysis-button {
+    background: linear-gradient(135deg, #5f7481, #374248) !important;
+}
+
+body.colorscheme-highcontrast .data-portal-button {
+    background: linear-gradient(135deg, #00bcd4, #0097a7) !important;
+}
+
+body.colorscheme-highcontrast .custom-dashboard-button {
+    background: linear-gradient(135deg, #e91e63, #c2185b) !important;
+}
+
+body.colorscheme-arctic .data-portal-button {
+    background: linear-gradient(135deg, #8bc34a, #689f38) !important;
+}
+
+body.colorscheme-arctic .bowtie-analysis-button {
+    background: linear-gradient(135deg, #9c27b0, #7b1fa2) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .data-portal-button,
+    .bowtie-analysis-button,
+    .custom-dashboard-button,
+    .test-plugin-button {
+        width: 40px !important;
+        height: 40px !important;
+        left: 8px !important;
+        font-size: 14px !important;
+    }
+    
+    .data-portal-button { top: 80px !important; }
+    .bowtie-analysis-button { top: 130px !important; }
+    .custom-dashboard-button { top: 180px !important; }
+    .test-plugin-button { top: 230px !important; }
+}
+
+/* Force theme transitions */
+body[class*="colorscheme"] * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    body[class*="colorscheme"] * {
+        transition: none !important;
+    }
+}
+
+/* Debug indicator styling */
+#theme-indicator {
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    z-index: 99999 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+body.colorscheme-default #theme-indicator {
+    background: linear-gradient(135deg, #2196f3, #1976d2) !important;
+    color: white !important;
+    border: 1px solid #1565c0 !important;
+}
+
+body.colorscheme-dark #theme-indicator {
+    background: linear-gradient(135deg, #5dade2, #2f5f8f) !important;
+    color: white !important;
+    border: 1px solid #374248 !important;
+}
+
+body.colorscheme-highcontrast #theme-indicator {
+    background: linear-gradient(135deg, #ff9800, #f57c00) !important;
+    color: white !important;
+    border: 2px solid #ef6c00 !important;
+}
+
+body.colorscheme-arctic #theme-indicator {
+    background: linear-gradient(135deg, #8bc34a, #689f38) !important;
+    color: white !important;
+    border: 1px solid #558b2f !important;
+}

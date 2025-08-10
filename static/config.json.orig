@@ -35,53 +35,9 @@
   "wmsHidpi": false,
   "wmsMaxGetUrlLength": 2048,
   "qgisServerVersion": 3,
-  "defaultColorScheme": "ocean-blue",
+  "defaultColorScheme": "default",
   "cacheVersion": "20250718-v2",
   "username": "admin",
-  
-  "colorSchemes": {
-    "ocean-blue": {
-      "title": "Ocean Blue",
-      "description": "Professional marine research theme",
-      "className": "colorscheme-default",
-      "icon": "🌊",
-      "primary": "#2196f3",
-      "secondary": "#009688",
-      "background": "#ffffff",
-      "text": "#212121"
-    },
-    "deep-sea": {
-      "title": "Deep Sea",
-      "description": "Dark theme for extended use",
-      "className": "colorscheme-dark",
-      "icon": "🌌",
-      "primary": "#5dade2",
-      "secondary": "#5f7481",
-      "background": "#0f1419",
-      "text": "#e3f2fd"
-    },
-    "coral-reef": {
-      "title": "Coral Reef",
-      "description": "High contrast accessible theme",
-      "className": "colorscheme-highcontrast",
-      "icon": "🐠",
-      "primary": "#ff9800",
-      "secondary": "#00bcd4",
-      "background": "#ffffff",
-      "text": "#000000"
-    },
-    "arctic": {
-      "title": "Arctic",
-      "description": "Clean minimalist theme",
-      "className": "colorscheme-arctic",
-      "icon": "🧊",
-      "primary": "#8bc34a",
-      "secondary": "#9c27b0",
-      "background": "#fefefe",
-      "text": "#263238"
-    }
-  },
-
   "defaultFeatureStyle": {
     "strokeColor": [0, 0, 255, 1],
     "strokeWidth": 1,
@@ -98,7 +54,7 @@
       "code": "EPSG:3035",
       "proj": "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs",
       "label": "ETRS89-extended / LAEA Europe"
-    },
+    },	
     {
       "code": "EPSG:32632",
       "proj": "+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs",
@@ -125,7 +81,6 @@
       "label": "SIRGAS 2000 / UTM zone 23S"
     }
   ],
-
   "plugins": {
     "common": [
       {
@@ -352,12 +307,6 @@
                 {"task": "CustomDashboardPlugin", "icon": "tools", "title": "Custom Dashboard"},
                 {"task": "TestPlugin", "icon": "ok", "title": "Test Plugin"}
               ]},
-              {"key": "Themes", "icon": "palette", "title": "Visual Themes", "subitems": [
-                {"action": "switchTheme", "data": "ocean-blue", "icon": "palette", "title": "🌊 Ocean Blue"},
-                {"action": "switchTheme", "data": "deep-sea", "icon": "palette", "title": "🌌 Deep Sea"},
-                {"action": "switchTheme", "data": "coral-reef", "icon": "palette", "title": "🐠 Coral Reef"},
-                {"action": "switchTheme", "data": "arctic", "icon": "palette", "title": "🧊 Arctic"}
-              ]},
               {"key": "Links", "icon": "link", "title": "Links", "subitems": [
                 {"icon": "link", "title": "qwc2", "url": "https://github.com/qgis/qwc2/"},
                 {"icon": "link", "title": "qwc-docker", "url": "https://github.com/qwc-services/qwc-docker"},
@@ -427,12 +376,6 @@
               {"key": "MapExport", "icon": "rasterexport"},
               {"key": "Routing", "icon": "routing"}
             ]},
-            {"key": "ColorScheme", "icon": "palette", "subitems": [
-              {"action": "switchColorScheme", "data": "ocean-blue", "icon": "palette", "title": "🌊 Ocean Blue"},
-              {"action": "switchColorScheme", "data": "deep-sea", "icon": "palette", "title": "🌌 Deep Sea"},
-              {"action": "switchColorScheme", "data": "coral-reef", "icon": "palette", "title": "🐠 Coral Reef"},
-              {"action": "switchColorScheme", "data": "arctic", "icon": "palette", "title": "🧊 Arctic"}
-            ]},
             {"key": "Print", "icon": "print", "shortcut": "alt+shift+p"},
             {"key": "Help", "icon": "info", "shortcut": "alt+shift+h"},
             {"key": "Settings", "icon": "cog"},
@@ -485,36 +428,18 @@
           ],
           "colorSchemes": [
             {
-              "titleMsgId": "Ocean Blue",
-              "title": "🌊 Ocean Blue",
-              "description": "Professional marine research theme",
-              "value": "ocean-blue",
-              "className": "colorscheme-default"
+              "titleMsgId": "colorschemes.default",
+              "value": "default"
             },
             {
-              "titleMsgId": "Deep Sea",
-              "title": "🌌 Deep Sea",
-              "description": "Dark theme for extended use",
-              "value": "deep-sea",
-              "className": "colorscheme-dark"
+              "titleMsgId": "colorschemes.highcontrast",
+              "value": "highcontrast"
             },
             {
-              "titleMsgId": "Coral Reef",
-              "title": "🐠 Coral Reef",
-              "description": "High contrast accessible theme",
-              "value": "coral-reef",
-              "className": "colorscheme-highcontrast"
-            },
-            {
-              "titleMsgId": "Arctic",
-              "title": "🧊 Arctic",
-              "description": "Clean minimalist theme",
-              "value": "arctic",
-              "className": "colorscheme-arctic"
+              "titleMsgId": "colorschemes.dark",
+              "value": "dark"
             }
-          ],
-          "showColorSchemeInTopBar": true,
-          "defaultColorScheme": "ocean-blue"
+          ]
         }
       },
       {
@@ -579,6 +504,7 @@
         "name": "Debug",
         "cfg": {}
       }
+
     ],
     "mobile": [
       {

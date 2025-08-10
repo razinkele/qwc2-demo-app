@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MARBEFES Theme Test</title>
+    <link rel="stylesheet" type="text/css" href="static/assets/css/marbefes_themes.css" />
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .theme-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        
+        .theme-button {
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .ocean-blue { background: linear-gradient(135deg, #2196f3, #1976d2); color: white; }
+        .deep-sea { background: linear-gradient(135deg, #5dade2, #2f5f8f); color: white; }
+        .coral-reef { background: linear-gradient(135deg, #ff9800, #f57c00); color: white; }
+        .arctic { background: linear-gradient(135deg, #8bc34a, #689f38); color: white; }
+        
+        .test-components {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .test-card {
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: white;
+        }
+        
+        .status-bar {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background: #2196f3;
+            color: white;
+            border-radius: 6px;
+            font-weight: 600;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body class="colorscheme-default">
+    <div class="status-bar" id="status">🌊 Ocean Blue</div>
+    
+    <div class="test-container">
+        <h1>🌊 MARBEFES Theme Test Page</h1>
+        <p>Use this page to test if your color schemes are working properly. Click the buttons below to switch themes and observe the changes.</p>
+        
+        <div class="theme-buttons">
+            <button class="theme-button ocean-blue" onclick="switchToTheme('default')">
+                🌊 Ocean Blue<br><small>Professional marine research</small>
+            </button>
+            <button class="theme-button deep-sea" onclick="switchToTheme('dark')">
+                🌌 Deep Sea<br><small>Dark mode for extended use</small>
+            </button>
+            <button class="theme-button coral-reef" onclick="switchToTheme('highcontrast')">
+                🐠 Coral Reef<br><small>High contrast accessible</small>
+            </button>
+            <button class="theme-button arctic" onclick="switchToTheme('arctic')">
+                🧊 Arctic<br><small>Clean minimalist design</small>
+            </button>
+        </div>
+        
+        <div class="test-components">
+            <div class="test-card">
+                <h3>Sample Components</h3>
+                <button style="margin: 5px;">Primary Button</button>
+                <button class="secondary" style="margin: 5px;">Secondary Button</button>
+                <br><br>
+                <input type="text" placeholder="Sample input field" style="width: 100%; margin: 5px 0;">
+                <br>
+                <select style="width: 100%; margin: 5px 0;">
+                    <option>Sample dropdown</option>
+                    <option>Option 2</option>
+                </select>
+            </div>
+            
+            <div class="test-card">
+                <h3>Status Colors</h3>
+                <div class="success" style="margin: 5px 0;">✓ Success message</div>
+                <div class="warning" style="margin: 5px 0;">⚠ Warning message</div>
+                <div class="error" style="margin: 5px 0;">✗ Error message</div>
+                <div class="info" style="margin: 5px 0;">ℹ Info message</div>
+            </div>
+            
+            <div class="test-card">
+                <h3>Debug Info</h3>
+                <div id="debug-info">
+                    <div>Current Theme: <span id="current-theme">default</span></div>
+                    <div>Body Classes: <span id="body-classes">colorscheme-default</span></div>
+                    <div>Saved Theme: <span id="saved-theme">-</span></div>
+                </div>
+                <br>
+                <button onclick="updateDebugInfo()">Refresh Debug Info</button>
+                <button onclick="clearSavedTheme()">Clear Saved Theme</button>
+            </div>
+        </div>
+        
+        <h3>Testing Instructions</h3>
+        <ol>
+            <li><strong>Visual Changes:</strong> When you click theme buttons, you should see immediate changes in background colors, text colors, and button styles.</li>
+            <li><strong>Persistence:</strong> Refresh the page - it should remember your last selected theme.</li>
+            <li><strong>Debug Info:</strong> Use the debug panel to verify theme classes are being applied correctly.</li>
+            <li><strong>Console:</strong> Open browser console (F12) to see detailed logging of theme switches.</li>
+        </ol>
+        
+        <h3>Troubleshooting</h3>
+        <ul>
+            <li>If colors don't change: Check that <code>marbefes-themes.css</code> is loaded</li>
+            <li>If persistence doesn't work: Check browser console for localStorage errors</li>
+            <li>If buttons don't work: Verify JavaScript is enabled and no console errors</li>
+        </ul>
+    </div>
+
+    <script>
+        // Simple theme manager for testing
+        const themes = {
+            'default': { name: '🌊 Ocean Blue', className: 'colorscheme-default' },
+            'dark': { name: '🌌 Deep Sea', className: 'colorscheme-dark' },
+            'highcontrast': { name: '🐠 Coral Reef', className: 'colorscheme-highcontrast' },
+            'arctic': { name: '🧊 Arctic', className: 'colorscheme-arctic' }
+        };
+        
+        let currentTheme = 'default';
+        
+        function switchToTheme(themeKey) {
+            console.log('Switching to theme:', themeKey);
+            
+            const theme = themes[themeKey];
+            if (!theme) return;
+            
+            // Remove all theme classes
+            Object.values(themes).forEach(t => {
+                document.body.classList.remove(t.className);
+            });
+            
+            // Add new theme class
+            document.body.classList.add(theme.className);
+            currentTheme = themeKey;
+            
+            // Update status
+            document.getElementById('status').textContent = theme.name;
+            
+            // Save to localStorage
+            localStorage.setItem('marbefes-theme', themeKey);
+            
+            // Update debug info
+            updateDebugInfo();
+            
+            console.log('Theme switched to:', theme.name, 'Body classes:', document.body.className);
+        }
+        
+        function updateDebugInfo() {
+            document.getElementById('current-theme').textContent = currentTheme;
+            document.getElementById('body-classes').textContent = document.body.className;
+            document.getElementById('saved-theme').textContent = localStorage.getItem('marbefes-theme') || 'none';
+        }
+        
+        function clearSavedTheme() {
+            localStorage.removeItem('marbefes-theme');
+            updateDebugInfo();
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('marbefes-theme') || 'default';
+            switchToTheme(savedTheme);
+            updateDebugInfo();
+        });
+        
+        // Keyboard shortcut for testing
+        document.addEventListener('keydown', function(e) {
+            if (e.altKey && e.key >= '1' && e.key <= '4') {
+                const themeKeys = ['default', 'dark', 'highcontrast', 'arctic'];
+                const themeIndex = parseInt(e.key) - 1;
+                if (themeKeys[themeIndex]) {
+                    switchToTheme(themeKeys[themeIndex]);
+                }
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
